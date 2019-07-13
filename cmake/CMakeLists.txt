@@ -510,7 +510,7 @@ else()
 endif()
 
 if(BUILD_EXE)
-  add_executable(lmp ${LMP_SOURCES} ../src/fix_example.cpp ../src/fix_example.h)
+  add_executable(lmp ${LMP_SOURCES} ../src/fix_example.cpp ../src/fix_example.h ../src/fix_heun.cpp ../src/fix_heun.h)
   if(BUILD_LIB)
     target_link_libraries(lmp lammps)
   else()
