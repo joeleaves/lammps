@@ -81,7 +81,7 @@ void FixHeun::final_integrate(){
             }
         }
     }
-    compute_forces();//You need this because the positions were advanced during the previuos timestep.
+    compute_forces();//You need this because the positions were advanced during the previous timestep.
 }
 
 void FixHeun::grow_arrays(int nmax)
@@ -200,7 +200,7 @@ void FixHeun::force_clear()//Adapted from verlet.cpp.
         }
     }
 
-void FixHeun::compute_forces() {
+void FixHeun::compute_forces() {//Adapted from min.cpp
     int nflag = neighbor->decide();
     if (nflag == 0) {
         timer->stamp();
@@ -236,7 +236,7 @@ void FixHeun::compute_forces() {
             modify->min_post_neighbor();
             timer->stamp(Timer::MODIFY);
         }
-    }
+    }//In my version of this I do NOT update the energy or virials in this part of the calculation.
     int eflag = 0;//3;
     int vflag = 0;//5;
     //ev_set(update->ntimestep);
@@ -261,7 +261,7 @@ void FixHeun::compute_forces() {
         if (force->dihedral) force->dihedral->compute(eflag,vflag);
         if (force->improper) force->improper->compute(eflag,vflag);
          */
-        timer->stamp(Timer::BOND);
+        //timer->stamp(Timer::BOND);
     }
 
     //if (kspace_compute_flag) {
@@ -278,6 +278,6 @@ void FixHeun::compute_forces() {
         comm->reverse_comm();
         timer->stamp(Timer::COMM);
     }
-} // Adapted from min.cpp
+}
 
 
