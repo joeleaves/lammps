@@ -1,0 +1,206 @@
+#Pyrene with 2 waters
+#VARIABLES
+
+variable ts		equal 0.1
+variable Tdamp	equal 1000*${ts}
+variable myT	equal 180.0
+
+
+# DEFINE UNITS
+
+units		real
+atom_style	full
+
+dimension	3
+boundary	f f f
+
+
+#DEFINE THE SIMULATION BOX
+
+lattice		sc 3.1043
+region		simbox block -4.0066 4.0066 -4.0066 4.0066 -4.0066 4.0066 units lattice
+create_box		4 simbox bond/types 1 &
+			angle/types 1 &
+			extra/bond/per/atom 3 &
+	      	extra/special/per/atom 2 &
+			extra/angle/per/atom 1
+
+neighbor		2.5 bin
+neigh_modify	every 10 delay 30 check yes exclude type 3 3 exclude type 4 4 exclude type 3 4
+
+#SET POTENTIAL
+
+pair_style	lj/cut/tip4p/cut 1 2 1 1 0.1546 9.0
+pair_modify	mix arithmetic
+
+bond_style 		morse
+angle_style 	harmonic
+
+#kspace_style	pppm/tip4p 1.0e-6
+
+#pair_coeff	i j kij rij
+pair_coeff     1 1 0.1852 3.1644 	#O-O
+#pair_coeff     1 2 0.0 0.0		#O-H
+pair_coeff     2 2 0.0 0.0		#H-H
+pair_coeff     3 3 0.086 3.3997	#C-C
+pair_coeff     4 4 0.015 2.5996 	#H-H
+
+#pair_coeff     3 4 0.0359 2.9997 
+#pair_coeff     1 3 0.1144 3.2752
+#pair_coeff     2 3 0.0 0.0
+#pair_coeff     1 4 0.0478 2.8751
+#pair_coeff     2 4 0.0 0.0
+
+
+bond_coeff          1 131.2282 2.13498 0.9572 #Morse potential from R&W
+
+angle_coeff         1 49.5456 104.52  #Approx harmonic from R&W
+
+
+#ADD ATOMS
+
+mass 		1 15.9994		# O H2O
+mass 		2 1.00794		# H H2O
+mass 		3 12.01		# C PAH
+mass 		4 1.00794		# H PAH
+
+#Pyrene Range: z = (-4.6 - 4.6) y = (-3.4 - 3.4)
+
+create_atoms 3 single	 0.000   0.000   3.533	units box #1
+create_atoms 3 single	 0.000   1.212   2.856	units box #2
+create_atoms 3 single	 0.000   1.239   1.431	units box #3
+create_atoms 3 single	 0.000   0.000   0.716	units box #4
+create_atoms 3 single	-0.000  -1.239   1.431	units box #5
+create_atoms 3 single	-0.000  -1.212   2.856	units box #6
+create_atoms 3 single	 0.000   2.442   0.690	units box #7
+create_atoms 3 single	 0.000   0.000  -0.716	units box #8
+create_atoms 3 single	 0.000   1.239  -1.431	units box #9
+create_atoms 3 single	 0.000   2.442  -0.690	units box #10
+create_atoms 3 single	 0.000   1.212  -2.856	units box #11
+create_atoms 4 single	 0.000   2.152  -3.402	units box #12
+create_atoms 3 single	 0.000   0.000  -3.533	units box #13
+create_atoms 3 single	-0.000  -1.212  -2.856	units box #14
+create_atoms 3 single	-0.000  -1.239  -1.431	units box #15
+create_atoms 3 single	-0.000  -2.442  -0.690	units box #16
+create_atoms 3 single	-0.000  -2.442   0.690	units box #17
+create_atoms 4 single	 0.000  -3.385   1.234	units box #18
+create_atoms 4 single	 0.000  -3.385  -1.234	units box #19
+create_atoms 4 single	 0.000   3.385   1.234	units box #20
+create_atoms 4 single	 0.000   0.000   4.622	units box #21
+create_atoms 4 single	 0.000   2.152   3.402	units box #22
+create_atoms 4 single	 0.000  -2.152   3.402	units box #23
+create_atoms 4 single	 0.000   3.385  -1.234	units box #24
+create_atoms 4 single	 0.000   0.000  -4.622	units box #25
+create_atoms 4 single	 0.000  -2.152  -3.402 	units box #26
+
+#Waters
+create_atoms 1 single 	1.317  -2.007   0.144	units box #27
+create_atoms 2 single	2.277  -2.007   0.144	units box #28
+create_atoms 2 single	0.997  -1.102   0.144	units box #29
+
+
+
+#Create bonds
+
+create_bonds  single/bond 1 27 28
+create_bonds  single/bond 1 27 29
+create_bonds  single/angle 1 28 27 29
+
+
+group		water type 1 2
+group		oxy type 1
+
+group		Py type 3 4
+#group		PyC type 3
+#group		PyH type 4
+
+#create_bonds	many NpC NpH 1 0.9 1.2 #need to define a bond type?? type is not 1
+#create_bonds	many NpC NpC 1 0.9 1.2
+
+#Minimize with just LJ:
+timestep	${ts}
+run_style	verlet
+
+
+#Set charges:
+
+#Pyrene
+
+group		h1 id 21 25
+group		h2 id 22 23 12 26
+group		h3 id 18 19 20 24
+group		c4 id 1 13
+group		c5 id 2 6 11 14
+group		c6 id 3 5 9 15
+group		c7 id 7 10 16 17
+group		c8 id 4 8
+
+set		group h1 charge 0.088579
+set		group h2 charge 0.136907
+set		group h3 charge 0.150069
+set		group c4 charge -0.013080
+set		group c5 charge -0.485961
+set 		group c6 charge 0.301889
+set		group c7 charge -0.365698
+set 		group c8 charge -0.049912
+
+
+
+#Water 
+set		    type 1 charge -1.1128
+set 		    type 2 charge 0.5564
+
+
+#Run
+velocity	water create ${myT} 4928459 loop local dist gaussian rot yes mom yes
+run	0
+velocity 	water scale ${myT}
+
+fix		freeze Py setforce 0.0 0.0 0.0
+
+compute	H2O_T water temp
+
+thermo		100
+thermo_style	custom step temp c_H2O_T econserve pe etotal press
+
+
+#dump		coords all custom 10 dump_py1_test.lammpstrj id type xu yu zu vx vy vz q
+
+
+#RUN MD
+
+fix		tstat water nvt temp ${myT} ${myT} ${Tdamp}
+
+run		1000000
+
+unfix		tstat
+
+#dump		coords all custom 10 dump_py1_test.lammpstrj id type xu yu zu vx vy vz q
+
+fix		micro all nve
+fix		rescale water temp/rescale 500 ${myT} ${myT} 5.0 1.00
+
+run 		500000
+
+unfix		rescale
+
+run		500000
+
+#Dipole Calc By Hand:
+variable 	mindivx atom vx*q
+compute	s1x all reduce sum v_mindivx
+
+variable 	mindivy atom vy*q
+compute	s1y all reduce sum v_mindivy
+
+variable 	mindivz atom vz*q
+compute	s1z all reduce sum v_mindivz
+
+fix		mall all ave/time 1 1 1 c_s1x c_s1y c_s1z file py1_rw_long180.txt mode scalar
+
+#dump		coords all custom 5 dump_py1_g3.lammpstrj id type xu yu zu vx vy vz q
+#dump		water water custom 5 dump_py2_water_g1.lammpstrj id type xu yu zu vx vy vz q
+
+run		10000000
+
+

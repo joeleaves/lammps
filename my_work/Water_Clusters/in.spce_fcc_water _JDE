@@ -1,0 +1,155 @@
+# Variables (SPCE rigid bulk)
+variable myT	equal 298.00
+variable ts		equal 1.0
+variable Tdamp	equal 1000*${ts}
+
+
+#Set up simulation lattice
+
+units		real
+atom_style	full
+
+dimension	3
+boundary	p p p
+
+lattice		fcc 4.93
+region		box block -1 2 -1 2 -1 2 units lattice
+create_box	3 box 		&
+			bond/types 1	&
+			angle/types 1	&
+			extra/bond/per/atom 2	&
+			extra/angle/per/atom 1	&
+			extra/special/per/atom 2
+
+neighbor		2.5 bin
+neigh_modify	every 1 delay 0 check yes
+
+molecule		water spce-water.txt
+
+create_atoms	0 box mol water 4928459 units lattice 
+
+#Define potentials etc
+
+pair_style	lj/cut/coul/long 9.0
+pair_modify	tail yes
+
+#kspace_style	ewald 1.0e-6
+kspace_style	pppm 1.0e-6
+
+#pair coeff i j kij rij
+pair_coeff 1 1 0.1553 3.166
+pair_coeff 1 2 0.0 0.0
+pair_coeff 2 2 0.0 0.0
+pair_coeff 3 3 0.0 0.0
+pair_coeff 1 3 0.0 0.0
+pair_coeff 2 3 0.0 0.0
+
+bond_style	harmonic
+
+angle_style	harmonic
+
+bond_coeff        1 1000 1.0
+
+angle_coeff		1 100 109.47
+
+special_bonds	lj/coul 0.0 0.0 0.5
+
+mass 1 15.9994
+mass 2 2.014
+mass 3 1.008
+
+group		water type 1 2
+group 	oxy type 1
+group		hyd type 2
+group		interesto id 112
+group		interesth id 113
+
+set		atom 113 type 3
+
+#Simulation running steps
+
+#minimize
+
+velocity	all create ${myT} 4928459 dist gaussian
+velocity	all zero linear
+velocity	all zero angular
+
+
+thermo		10
+thermo_style	custom step temp econserve pe etotal vol press density
+
+timestep		${ts}
+
+#min_style		cg
+#minimize		1.0e-4 1.0e-6 100 1000
+
+#Run 
+#fix		shake water shake 0.0001 50 10 b 1 a 1
+
+#fix		tstat all nvt temp ${myT} ${myT} ${Tdamp}
+
+#dump		coords all custom 5 dump_spce_1.lammpstrj id type mass xu yu zu vx vy vz q
+
+#run		10000
+
+#unfix		tstat
+
+fix		micro all nve
+fix		rescale all temp/rescale 500 ${myT} ${myT} 5.0 1.00
+fix		rattle all rattle 0.0001 50 10 t 1 2 3 b 1 a 1
+
+run		15000
+
+unfix		rescale
+
+run		5000
+
+
+
+
+#Dipole Calc By Hand:
+variable        mindivx atom vx*q
+compute s1x all reduce sum v_mindivx
+
+variable        mindivy atom vy*q
+compute s1y all reduce sum v_mindivy
+
+variable        mindivz atom vz*q
+compute s1z all reduce sum v_mindivz
+
+#fix             mall all ave/time 1 1 1 c_s1x c_s1y c_s1z file spce_dipv_TRAJ.txt mode scalar
+
+
+#F (O = 112, H1 = 113)
+
+variable rmoh		equal (15.9994*1.00794)/(1.00794+15.9994)
+
+variable fffx		equal "v_rmoh*((fx[112]/15.9994) - (fx[113]/1.00794))"
+variable fffy		equal "v_rmoh*((fy[112]/15.9994) - (fy[113]/1.00794))"
+variable fffz		equal "v_rmoh*((fz[112]/15.9994) - (fz[113]/1.00794))"
+
+fix                     fprnt all ave/time 1 1 1 v_fffx v_fffy v_fffz file spce_ff_p1.txt mode scalar
+
+
+#e
+
+#variable eex		equal "(x[112] - x[113])/sqrt((x[112] - x[113])^2 + (y[112] - y[113])^2 + (z[112] - z[113])^2)"
+#variable eey		equal "(y[112] - y[113])/sqrt((x[112] - x[113])^2 + (y[112] - y[113])^2 + (z[112] - z[113])^2)"
+#variable eez		equal "(z[112] - z[113])/sqrt((x[112] - x[113])^2 + (y[112] - y[113])^2 + (z[112] - z[113])^2)"
+
+#fix                     eprint all ave/time 1 1 1 v_eex v_eey v_eez file spce_e_r5.txt mode scalar
+
+#variable fhx		equal fx[113]
+#variable fhy		equal fy[113]
+#variable fhz		equal fz[113]
+
+#fix                     fprint all ave/time 1 1 1 v_fhx v_fhy v_fhz file spce_fh_s8.txt mode scalar
+
+dump		eeo interesto custom 1 dump_eeO_p1.txt id xu yu zu vx vy vz fx fy fz
+dump		eeh interesth custom 1 dump_eeH_p1.txt id xu yu zu vx vy vz fx fy fz
+
+
+run		110000
+
+
+	
