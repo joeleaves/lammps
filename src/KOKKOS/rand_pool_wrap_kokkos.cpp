@@ -1,7 +1,8 @@
+// clang-format off
 /* ----------------------------------------------------------------------
    LAMMPS - Large-scale Atomic/Molecular Massively Parallel Simulator
-   http://lammps.sandia.gov, Sandia National Laboratories
-   Steve Plimpton, sjplimp@sandia.gov
+   https://www.lammps.org/, Sandia National Laboratories
+   LAMMPS development team: developers@lammps.org
 
    Copyright (2003) Sandia Corporation.  Under the terms of Contract
    DE-AC04-94AL85000 with Sandia Corporation, the U.S. Government retains
@@ -11,8 +12,8 @@
    See the README file in the top-level LAMMPS directory.
 ------------------------------------------------------------------------- */
 
-#include "comm.h"
 #include "rand_pool_wrap_kokkos.h"
+#include "comm.h"
 #include "lammps.h"
 #include "kokkos.h"
 #include "random_mars.h"
@@ -24,7 +25,7 @@ using namespace LAMMPS_NS;
 
 RandPoolWrap::RandPoolWrap(int, LAMMPS *lmp) : Pointers(lmp)
 {
-  random_thr =  NULL;
+  random_thr =  nullptr;
   nthreads = lmp->kokkos->nthreads;
 }
 
@@ -42,7 +43,7 @@ void RandPoolWrap::destroy()
       delete random_thr[i];
 
     delete[] random_thr;
-    random_thr = NULL;
+    random_thr = nullptr;
   }
 }
 
