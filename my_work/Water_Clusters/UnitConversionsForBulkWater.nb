@@ -1,0 +1,168 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5498,        160]
+NotebookOptionsPosition[      4670,        136]
+NotebookOutlinePosition[      5067,        152]
+CellTagsIndexPosition[      5024,        149]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Computing the lattice spacing on a cubic lattice from the bulk density.\
+\>", "Subsection",
+ CellChangeTimes->{{3.878813342389263*^9, 
+  3.878813356769373*^9}},ExpressionUUID->"94b3c07a-66c2-4582-8a0a-\
+10d1133d499f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Rho]", " ", "=", " ", 
+    RowBox[{"0.997", " ", 
+     FractionBox[
+      RowBox[{"Quantity", "[", "\"\<Grams\>\"", "]"}], 
+      SuperscriptBox[
+       RowBox[{"Quantity", "[", "\"\<Centimeters\>\"", "]"}], "3"]]}]}], 
+   ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"mm", " ", "=", " ", 
+    RowBox[{"18.01528", " ", 
+     FractionBox[
+      RowBox[{"Quantity", "[", "\"\<Grams\>\"", "]"}], 
+      RowBox[{"Quantity", "[", "\"\<Moles\>\"", "]"}]]}]}], " ", ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"na", " ", "=", " ", 
+    RowBox[{
+     RowBox[{"Entity", "[", 
+      RowBox[{
+      "\"\<PhysicalConstant\>\"", ",", " ", "\"\<AvogadroConstant\>\""}], 
+      "]"}], "[", "\"\<Value\>\"", "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"n", " ", "=", " ", 
+    RowBox[{
+     FractionBox["\[Rho]", "mm"], " ", "na"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"UnitConvert", "[", 
+   RowBox[{
+    SuperscriptBox["n", 
+     RowBox[{
+      RowBox[{"-", "1"}], "/", "3"}]], ",", "\"\<Angstroms\>\""}], "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.8787333488701267`*^9, 3.8787334421641283`*^9}, {
+  3.878733474268042*^9, 3.878733478299996*^9}, {3.878733517331974*^9, 
+  3.878733525649197*^9}, {3.878733701595084*^9, 3.8787337023304453`*^9}, {
+  3.8787344728803387`*^9, 3.878734554229714*^9}, {3.8787345953245697`*^9, 
+  3.8787347271357*^9}},
+ CellLabel->"In[52]:=",ExpressionUUID->"7d9b13d1-5db3-4311-8b9a-7c44446878bc"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "3.107408279770612`", "\"\[CapitalARing]\"", "\[ARing]ngstr\[ODoubleDot]ms",
+    "\"Angstroms\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{{3.878734616971284*^9, 3.878734646352298*^9}, {
+  3.8787346776098423`*^9, 3.8787346883378963`*^9}, {3.878734719616048*^9, 
+  3.878734727497489*^9}},
+ CellLabel->"Out[56]=",ExpressionUUID->"e13074dc-1cc6-4d7f-9230-6bbaa7617012"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Check", " ", "density", " ", "in", " ", 
+    RowBox[{"Avogadro", "."}]}], "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"vA", " ", "=", " ", 
+     RowBox[{"3750.64268", " ", 
+      SuperscriptBox[
+       RowBox[{"Quantity", "[", "\"\<Angstroms\>\"", "]"}], "3"]}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"nA", " ", "=", " ", 
+     SuperscriptBox["5", "3"]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Rho]A", " ", "=", " ", 
+     RowBox[{"nA", " ", "/", "vA"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"UnitConvert", "[", 
+    RowBox[{
+     RowBox[{"\[Rho]A", " ", 
+      RowBox[{"mm", "/", "na"}]}], ",", 
+     RowBox[{"\"\<Grams\>\"", "/", 
+      SuperscriptBox["\"\<Centimeters\>\"", "3"]}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.878812940790374*^9, 3.878813128907589*^9}, {
+  3.878813280692141*^9, 3.878813305802403*^9}},
+ CellLabel->"In[82]:=",ExpressionUUID->"513fcafa-8802-4497-975f-a651b1239e80"],
+
+Cell[BoxData[
+ TemplateBox[{"0.996998341297459`", 
+   RowBox[{"\"g\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+     SuperscriptBox["\"cm\"", "3"]}], "grams per centimeter cubed", 
+   FractionBox["\"Grams\"", 
+    SuperscriptBox["\"Centimeters\"", "3"]]},
+  "Quantity"]], "Output",
+ CellChangeTimes->{
+  3.878813020553108*^9, {3.878813053419414*^9, 3.8788130602840843`*^9}, {
+   3.8788130987391577`*^9, 3.878813130347157*^9}, {3.878813283480823*^9, 
+   3.878813306286789*^9}},
+ CellLabel->"Out[85]=",ExpressionUUID->"e8b2d970-728b-4bf7-9d16-8653e19da053"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1118, 891},
+WindowMargins->{{Automatic, 354}, {-280, Automatic}},
+FrontEndVersion->"13.1 for Mac OS X x86 (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"a10f8be5-0ce0-4b76-b747-6c8711000b17"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 227, 5, 54, "Subsection",ExpressionUUID->"94b3c07a-66c2-4582-8a0a-10d1133d499f"],
+Cell[CellGroupData[{
+Cell[832, 31, 1696, 45, 309, "Input",ExpressionUUID->"7d9b13d1-5db3-4311-8b9a-7c44446878bc"],
+Cell[2531, 78, 402, 8, 38, "Output",ExpressionUUID->"e13074dc-1cc6-4d7f-9230-6bbaa7617012"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2970, 91, 1103, 28, 180, "Input",ExpressionUUID->"513fcafa-8802-4497-975f-a651b1239e80"],
+Cell[4076, 121, 566, 11, 40, "Output",ExpressionUUID->"e8b2d970-728b-4bf7-9d16-8653e19da053"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

@@ -1,0 +1,639 @@
+<molecule formalCharge="-1984">
+ <crystal>
+  <scalar title="a" units="units:angstrom">15.537050</scalar>
+  <scalar title="b" units="units:angstrom">15.537050</scalar>
+  <scalar title="c" units="units:angstrom">15.537050</scalar>
+  <scalar title="alpha" units="units:degree">90.000000</scalar>
+  <scalar title="beta" units="units:degree">90.000000</scalar>
+  <scalar title="gamma" units="units:degree">90.000000</scalar>
+ </crystal>
+ <atomArray>
+  <atom id="a1" elementType="O" xFract="-0.044865" yFract="0.014243" zFract="-0.017035"/>
+  <atom id="a2" elementType="H" xFract="0.021802" yFract="0.014243" zFract="-0.017035"/>
+  <atom id="a3" elementType="H" xFract="-0.067086" yFract="0.047934" zFract="0.036027"/>
+  <atom id="a4" elementType="O" formalCharge="-2" xFract="-0.044865" yFract="0.014243" zFract="0.182965"/>
+  <atom id="a5" elementType="H" formalCharge="-7" xFract="0.021802" yFract="0.014243" zFract="0.182965"/>
+  <atom id="a6" elementType="H" formalCharge="-7" xFract="-0.067086" yFract="0.047934" zFract="0.236027"/>
+  <atom id="a7" elementType="O" formalCharge="-2" xFract="-0.044865" yFract="0.014243" zFract="0.382965"/>
+  <atom id="a8" elementType="H" formalCharge="-7" xFract="0.021802" yFract="0.014243" zFract="0.382965"/>
+  <atom id="a9" elementType="H" formalCharge="-7" xFract="-0.067086" yFract="0.047934" zFract="0.436027"/>
+  <atom id="a10" elementType="O" formalCharge="-2" xFract="-0.044865" yFract="0.014243" zFract="0.582965"/>
+  <atom id="a11" elementType="H" formalCharge="-7" xFract="0.021802" yFract="0.014243" zFract="0.582965"/>
+  <atom id="a12" elementType="H" formalCharge="-7" xFract="-0.067086" yFract="0.047934" zFract="0.636027"/>
+  <atom id="a13" elementType="O" formalCharge="-2" xFract="-0.044865" yFract="0.014243" zFract="0.782965"/>
+  <atom id="a14" elementType="H" formalCharge="-7" xFract="0.021802" yFract="0.014243" zFract="0.782965"/>
+  <atom id="a15" elementType="H" formalCharge="-7" xFract="-0.067086" yFract="0.047934" zFract="0.836027"/>
+  <atom id="a16" elementType="O" formalCharge="-2" xFract="-0.044865" yFract="0.214243" zFract="-0.017035"/>
+  <atom id="a17" elementType="H" formalCharge="-7" xFract="0.021802" yFract="0.214243" zFract="-0.017035"/>
+  <atom id="a18" elementType="H" formalCharge="-7" xFract="-0.067086" yFract="0.247934" zFract="0.036027"/>
+  <atom id="a19" elementType="O" formalCharge="-2" xFract="-0.044865" yFract="0.214243" zFract="0.182965"/>
+  <atom id="a20" elementType="H" formalCharge="-7" xFract="0.021802" yFract="0.214243" zFract="0.182965"/>
+  <atom id="a21" elementType="H" formalCharge="-7" xFract="-0.067086" yFract="0.247934" zFract="0.236027"/>
+  <atom id="a22" elementType="O" formalCharge="-2" xFract="-0.044865" yFract="0.214243" zFract="0.382965"/>
+  <atom id="a23" elementType="H" formalCharge="-7" xFract="0.021802" yFract="0.214243" zFract="0.382965"/>
+  <atom id="a24" elementType="H" formalCharge="-7" xFract="-0.067086" yFract="0.247934" zFract="0.436027"/>
+  <atom id="a25" elementType="O" formalCharge="-2" xFract="-0.044865" yFract="0.214243" zFract="0.582965"/>
+  <atom id="a26" elementType="H" formalCharge="-7" xFract="0.021802" yFract="0.214243" zFract="0.582965"/>
+  <atom id="a27" elementType="H" formalCharge="-7" xFract="-0.067086" yFract="0.247934" zFract="0.636027"/>
+  <atom id="a28" elementType="O" formalCharge="-2" xFract="-0.044865" yFract="0.214243" zFract="0.782965"/>
+  <atom id="a29" elementType="H" formalCharge="-7" xFract="0.021802" yFract="0.214243" zFract="0.782965"/>
+  <atom id="a30" elementType="H" formalCharge="-7" xFract="-0.067086" yFract="0.247934" zFract="0.836027"/>
+  <atom id="a31" elementType="O" formalCharge="-2" xFract="-0.044865" yFract="0.414243" zFract="-0.017035"/>
+  <atom id="a32" elementType="H" formalCharge="-7" xFract="0.021802" yFract="0.414243" zFract="-0.017035"/>
+  <atom id="a33" elementType="H" formalCharge="-7" xFract="-0.067086" yFract="0.447934" zFract="0.036027"/>
+  <atom id="a34" elementType="O" formalCharge="-2" xFract="-0.044865" yFract="0.414243" zFract="0.182965"/>
+  <atom id="a35" elementType="H" formalCharge="-7" xFract="0.021802" yFract="0.414243" zFract="0.182965"/>
+  <atom id="a36" elementType="H" formalCharge="-7" xFract="-0.067086" yFract="0.447934" zFract="0.236027"/>
+  <atom id="a37" elementType="O" formalCharge="-2" xFract="-0.044865" yFract="0.414243" zFract="0.382965"/>
+  <atom id="a38" elementType="H" formalCharge="-7" xFract="0.021802" yFract="0.414243" zFract="0.382965"/>
+  <atom id="a39" elementType="H" formalCharge="-7" xFract="-0.067086" yFract="0.447934" zFract="0.436027"/>
+  <atom id="a40" elementType="O" formalCharge="-2" xFract="-0.044865" yFract="0.414243" zFract="0.582965"/>
+  <atom id="a41" elementType="H" formalCharge="-7" xFract="0.021802" yFract="0.414243" zFract="0.582965"/>
+  <atom id="a42" elementType="H" formalCharge="-7" xFract="-0.067086" yFract="0.447934" zFract="0.636027"/>
+  <atom id="a43" elementType="O" formalCharge="-2" xFract="-0.044865" yFract="0.414243" zFract="0.782965"/>
+  <atom id="a44" elementType="H" formalCharge="-7" xFract="0.021802" yFract="0.414243" zFract="0.782965"/>
+  <atom id="a45" elementType="H" formalCharge="-7" xFract="-0.067086" yFract="0.447934" zFract="0.836027"/>
+  <atom id="a46" elementType="O" formalCharge="-2" xFract="-0.044865" yFract="0.614243" zFract="-0.017035"/>
+  <atom id="a47" elementType="H" formalCharge="-7" xFract="0.021802" yFract="0.614243" zFract="-0.017035"/>
+  <atom id="a48" elementType="H" formalCharge="-7" xFract="-0.067086" yFract="0.647934" zFract="0.036027"/>
+  <atom id="a49" elementType="O" formalCharge="-2" xFract="-0.044865" yFract="0.614243" zFract="0.182965"/>
+  <atom id="a50" elementType="H" formalCharge="-7" xFract="0.021802" yFract="0.614243" zFract="0.182965"/>
+  <atom id="a51" elementType="H" formalCharge="-7" xFract="-0.067086" yFract="0.647934" zFract="0.236027"/>
+  <atom id="a52" elementType="O" formalCharge="-2" xFract="-0.044865" yFract="0.614243" zFract="0.382965"/>
+  <atom id="a53" elementType="H" formalCharge="-7" xFract="0.021802" yFract="0.614243" zFract="0.382965"/>
+  <atom id="a54" elementType="H" formalCharge="-7" xFract="-0.067086" yFract="0.647934" zFract="0.436027"/>
+  <atom id="a55" elementType="O" formalCharge="-2" xFract="-0.044865" yFract="0.614243" zFract="0.582965"/>
+  <atom id="a56" elementType="H" formalCharge="-7" xFract="0.021802" yFract="0.614243" zFract="0.582965"/>
+  <atom id="a57" elementType="H" formalCharge="-7" xFract="-0.067086" yFract="0.647934" zFract="0.636027"/>
+  <atom id="a58" elementType="O" formalCharge="-2" xFract="-0.044865" yFract="0.614243" zFract="0.782965"/>
+  <atom id="a59" elementType="H" formalCharge="-7" xFract="0.021802" yFract="0.614243" zFract="0.782965"/>
+  <atom id="a60" elementType="H" formalCharge="-7" xFract="-0.067086" yFract="0.647934" zFract="0.836027"/>
+  <atom id="a61" elementType="O" formalCharge="-2" xFract="-0.044865" yFract="0.814243" zFract="-0.017035"/>
+  <atom id="a62" elementType="H" formalCharge="-7" xFract="0.021802" yFract="0.814243" zFract="-0.017035"/>
+  <atom id="a63" elementType="H" formalCharge="-7" xFract="-0.067086" yFract="0.847934" zFract="0.036027"/>
+  <atom id="a64" elementType="O" formalCharge="-2" xFract="-0.044865" yFract="0.814243" zFract="0.182965"/>
+  <atom id="a65" elementType="H" formalCharge="-7" xFract="0.021802" yFract="0.814243" zFract="0.182965"/>
+  <atom id="a66" elementType="H" formalCharge="-7" xFract="-0.067086" yFract="0.847934" zFract="0.236027"/>
+  <atom id="a67" elementType="O" formalCharge="-2" xFract="-0.044865" yFract="0.814243" zFract="0.382965"/>
+  <atom id="a68" elementType="H" formalCharge="-7" xFract="0.021802" yFract="0.814243" zFract="0.382965"/>
+  <atom id="a69" elementType="H" formalCharge="-7" xFract="-0.067086" yFract="0.847934" zFract="0.436027"/>
+  <atom id="a70" elementType="O" formalCharge="-2" xFract="-0.044865" yFract="0.814243" zFract="0.582965"/>
+  <atom id="a71" elementType="H" formalCharge="-7" xFract="0.021802" yFract="0.814243" zFract="0.582965"/>
+  <atom id="a72" elementType="H" formalCharge="-7" xFract="-0.067086" yFract="0.847934" zFract="0.636027"/>
+  <atom id="a73" elementType="O" formalCharge="-2" xFract="-0.044865" yFract="0.814243" zFract="0.782965"/>
+  <atom id="a74" elementType="H" formalCharge="-7" xFract="0.021802" yFract="0.814243" zFract="0.782965"/>
+  <atom id="a75" elementType="H" formalCharge="-7" xFract="-0.067086" yFract="0.847934" zFract="0.836027"/>
+  <atom id="a76" elementType="O" formalCharge="-2" xFract="0.155135" yFract="0.014243" zFract="-0.017035"/>
+  <atom id="a77" elementType="H" formalCharge="-7" xFract="0.221802" yFract="0.014243" zFract="-0.017035"/>
+  <atom id="a78" elementType="H" formalCharge="-7" xFract="0.132914" yFract="0.047934" zFract="0.036027"/>
+  <atom id="a79" elementType="O" formalCharge="-2" xFract="0.155135" yFract="0.014243" zFract="0.182965"/>
+  <atom id="a80" elementType="H" formalCharge="-7" xFract="0.221802" yFract="0.014243" zFract="0.182965"/>
+  <atom id="a81" elementType="H" formalCharge="-7" xFract="0.132914" yFract="0.047934" zFract="0.236027"/>
+  <atom id="a82" elementType="O" formalCharge="-2" xFract="0.155135" yFract="0.014243" zFract="0.382965"/>
+  <atom id="a83" elementType="H" formalCharge="-7" xFract="0.221802" yFract="0.014243" zFract="0.382965"/>
+  <atom id="a84" elementType="H" formalCharge="-7" xFract="0.132914" yFract="0.047934" zFract="0.436027"/>
+  <atom id="a85" elementType="O" formalCharge="-2" xFract="0.155135" yFract="0.014243" zFract="0.582965"/>
+  <atom id="a86" elementType="H" formalCharge="-7" xFract="0.221802" yFract="0.014243" zFract="0.582965"/>
+  <atom id="a87" elementType="H" formalCharge="-7" xFract="0.132914" yFract="0.047934" zFract="0.636027"/>
+  <atom id="a88" elementType="O" formalCharge="-2" xFract="0.155135" yFract="0.014243" zFract="0.782965"/>
+  <atom id="a89" elementType="H" formalCharge="-7" xFract="0.221802" yFract="0.014243" zFract="0.782965"/>
+  <atom id="a90" elementType="H" formalCharge="-7" xFract="0.132914" yFract="0.047934" zFract="0.836027"/>
+  <atom id="a91" elementType="O" formalCharge="-2" xFract="0.155135" yFract="0.214243" zFract="-0.017035"/>
+  <atom id="a92" elementType="H" formalCharge="-7" xFract="0.221802" yFract="0.214243" zFract="-0.017035"/>
+  <atom id="a93" elementType="H" formalCharge="-7" xFract="0.132914" yFract="0.247934" zFract="0.036027"/>
+  <atom id="a94" elementType="O" formalCharge="-2" xFract="0.155135" yFract="0.214243" zFract="0.182965"/>
+  <atom id="a95" elementType="H" formalCharge="-7" xFract="0.221802" yFract="0.214243" zFract="0.182965"/>
+  <atom id="a96" elementType="H" formalCharge="-7" xFract="0.132914" yFract="0.247934" zFract="0.236027"/>
+  <atom id="a97" elementType="O" formalCharge="-2" xFract="0.155135" yFract="0.214243" zFract="0.382965"/>
+  <atom id="a98" elementType="H" formalCharge="-7" xFract="0.221802" yFract="0.214243" zFract="0.382965"/>
+  <atom id="a99" elementType="H" formalCharge="-7" xFract="0.132914" yFract="0.247934" zFract="0.436027"/>
+  <atom id="a100" elementType="O" formalCharge="-2" xFract="0.155135" yFract="0.214243" zFract="0.582965"/>
+  <atom id="a101" elementType="H" formalCharge="-7" xFract="0.221802" yFract="0.214243" zFract="0.582965"/>
+  <atom id="a102" elementType="H" formalCharge="-7" xFract="0.132914" yFract="0.247934" zFract="0.636027"/>
+  <atom id="a103" elementType="O" formalCharge="-2" xFract="0.155135" yFract="0.214243" zFract="0.782965"/>
+  <atom id="a104" elementType="H" formalCharge="-7" xFract="0.221802" yFract="0.214243" zFract="0.782965"/>
+  <atom id="a105" elementType="H" formalCharge="-7" xFract="0.132914" yFract="0.247934" zFract="0.836027"/>
+  <atom id="a106" elementType="O" formalCharge="-2" xFract="0.155135" yFract="0.414243" zFract="-0.017035"/>
+  <atom id="a107" elementType="H" formalCharge="-7" xFract="0.221802" yFract="0.414243" zFract="-0.017035"/>
+  <atom id="a108" elementType="H" formalCharge="-7" xFract="0.132914" yFract="0.447934" zFract="0.036027"/>
+  <atom id="a109" elementType="O" formalCharge="-2" xFract="0.155135" yFract="0.414243" zFract="0.182965"/>
+  <atom id="a110" elementType="H" formalCharge="-7" xFract="0.221802" yFract="0.414243" zFract="0.182965"/>
+  <atom id="a111" elementType="H" formalCharge="-7" xFract="0.132914" yFract="0.447934" zFract="0.236027"/>
+  <atom id="a112" elementType="O" formalCharge="-2" xFract="0.155135" yFract="0.414243" zFract="0.382965"/>
+  <atom id="a113" elementType="H" formalCharge="-7" xFract="0.221802" yFract="0.414243" zFract="0.382965"/>
+  <atom id="a114" elementType="H" formalCharge="-7" xFract="0.132914" yFract="0.447934" zFract="0.436027"/>
+  <atom id="a115" elementType="O" formalCharge="-2" xFract="0.155135" yFract="0.414243" zFract="0.582965"/>
+  <atom id="a116" elementType="H" formalCharge="-7" xFract="0.221802" yFract="0.414243" zFract="0.582965"/>
+  <atom id="a117" elementType="H" formalCharge="-7" xFract="0.132914" yFract="0.447934" zFract="0.636027"/>
+  <atom id="a118" elementType="O" formalCharge="-2" xFract="0.155135" yFract="0.414243" zFract="0.782965"/>
+  <atom id="a119" elementType="H" formalCharge="-7" xFract="0.221802" yFract="0.414243" zFract="0.782965"/>
+  <atom id="a120" elementType="H" formalCharge="-7" xFract="0.132914" yFract="0.447934" zFract="0.836027"/>
+  <atom id="a121" elementType="O" formalCharge="-2" xFract="0.155135" yFract="0.614243" zFract="-0.017035"/>
+  <atom id="a122" elementType="H" formalCharge="-7" xFract="0.221802" yFract="0.614243" zFract="-0.017035"/>
+  <atom id="a123" elementType="H" formalCharge="-7" xFract="0.132914" yFract="0.647934" zFract="0.036027"/>
+  <atom id="a124" elementType="O" formalCharge="-2" xFract="0.155135" yFract="0.614243" zFract="0.182965"/>
+  <atom id="a125" elementType="H" formalCharge="-7" xFract="0.221802" yFract="0.614243" zFract="0.182965"/>
+  <atom id="a126" elementType="H" formalCharge="-7" xFract="0.132914" yFract="0.647934" zFract="0.236027"/>
+  <atom id="a127" elementType="O" formalCharge="-2" xFract="0.155135" yFract="0.614243" zFract="0.382965"/>
+  <atom id="a128" elementType="H" formalCharge="-7" xFract="0.221802" yFract="0.614243" zFract="0.382965"/>
+  <atom id="a129" elementType="H" formalCharge="-7" xFract="0.132914" yFract="0.647934" zFract="0.436027"/>
+  <atom id="a130" elementType="O" formalCharge="-2" xFract="0.155135" yFract="0.614243" zFract="0.582965"/>
+  <atom id="a131" elementType="H" formalCharge="-7" xFract="0.221802" yFract="0.614243" zFract="0.582965"/>
+  <atom id="a132" elementType="H" formalCharge="-7" xFract="0.132914" yFract="0.647934" zFract="0.636027"/>
+  <atom id="a133" elementType="O" formalCharge="-2" xFract="0.155135" yFract="0.614243" zFract="0.782965"/>
+  <atom id="a134" elementType="H" formalCharge="-7" xFract="0.221802" yFract="0.614243" zFract="0.782965"/>
+  <atom id="a135" elementType="H" formalCharge="-7" xFract="0.132914" yFract="0.647934" zFract="0.836027"/>
+  <atom id="a136" elementType="O" formalCharge="-2" xFract="0.155135" yFract="0.814243" zFract="-0.017035"/>
+  <atom id="a137" elementType="H" formalCharge="-7" xFract="0.221802" yFract="0.814243" zFract="-0.017035"/>
+  <atom id="a138" elementType="H" formalCharge="-7" xFract="0.132914" yFract="0.847934" zFract="0.036027"/>
+  <atom id="a139" elementType="O" formalCharge="-2" xFract="0.155135" yFract="0.814243" zFract="0.182965"/>
+  <atom id="a140" elementType="H" formalCharge="-7" xFract="0.221802" yFract="0.814243" zFract="0.182965"/>
+  <atom id="a141" elementType="H" formalCharge="-7" xFract="0.132914" yFract="0.847934" zFract="0.236027"/>
+  <atom id="a142" elementType="O" formalCharge="-2" xFract="0.155135" yFract="0.814243" zFract="0.382965"/>
+  <atom id="a143" elementType="H" formalCharge="-7" xFract="0.221802" yFract="0.814243" zFract="0.382965"/>
+  <atom id="a144" elementType="H" formalCharge="-7" xFract="0.132914" yFract="0.847934" zFract="0.436027"/>
+  <atom id="a145" elementType="O" formalCharge="-2" xFract="0.155135" yFract="0.814243" zFract="0.582965"/>
+  <atom id="a146" elementType="H" formalCharge="-7" xFract="0.221802" yFract="0.814243" zFract="0.582965"/>
+  <atom id="a147" elementType="H" formalCharge="-7" xFract="0.132914" yFract="0.847934" zFract="0.636027"/>
+  <atom id="a148" elementType="O" formalCharge="-2" xFract="0.155135" yFract="0.814243" zFract="0.782965"/>
+  <atom id="a149" elementType="H" formalCharge="-7" xFract="0.221802" yFract="0.814243" zFract="0.782965"/>
+  <atom id="a150" elementType="H" formalCharge="-7" xFract="0.132914" yFract="0.847934" zFract="0.836027"/>
+  <atom id="a151" elementType="O" formalCharge="-2" xFract="0.355135" yFract="0.014243" zFract="-0.017035"/>
+  <atom id="a152" elementType="H" formalCharge="-7" xFract="0.421802" yFract="0.014243" zFract="-0.017035"/>
+  <atom id="a153" elementType="H" formalCharge="-7" xFract="0.332914" yFract="0.047934" zFract="0.036027"/>
+  <atom id="a154" elementType="O" formalCharge="-2" xFract="0.355135" yFract="0.014243" zFract="0.182965"/>
+  <atom id="a155" elementType="H" formalCharge="-7" xFract="0.421802" yFract="0.014243" zFract="0.182965"/>
+  <atom id="a156" elementType="H" formalCharge="-7" xFract="0.332914" yFract="0.047934" zFract="0.236027"/>
+  <atom id="a157" elementType="O" formalCharge="-2" xFract="0.355135" yFract="0.014243" zFract="0.382965"/>
+  <atom id="a158" elementType="H" formalCharge="-7" xFract="0.421802" yFract="0.014243" zFract="0.382965"/>
+  <atom id="a159" elementType="H" formalCharge="-7" xFract="0.332914" yFract="0.047934" zFract="0.436027"/>
+  <atom id="a160" elementType="O" formalCharge="-2" xFract="0.355135" yFract="0.014243" zFract="0.582965"/>
+  <atom id="a161" elementType="H" formalCharge="-7" xFract="0.421802" yFract="0.014243" zFract="0.582965"/>
+  <atom id="a162" elementType="H" formalCharge="-7" xFract="0.332914" yFract="0.047934" zFract="0.636027"/>
+  <atom id="a163" elementType="O" formalCharge="-2" xFract="0.355135" yFract="0.014243" zFract="0.782965"/>
+  <atom id="a164" elementType="H" formalCharge="-7" xFract="0.421802" yFract="0.014243" zFract="0.782965"/>
+  <atom id="a165" elementType="H" formalCharge="-7" xFract="0.332914" yFract="0.047934" zFract="0.836027"/>
+  <atom id="a166" elementType="O" formalCharge="-2" xFract="0.355135" yFract="0.214243" zFract="-0.017035"/>
+  <atom id="a167" elementType="H" formalCharge="-7" xFract="0.421802" yFract="0.214243" zFract="-0.017035"/>
+  <atom id="a168" elementType="H" formalCharge="-7" xFract="0.332914" yFract="0.247934" zFract="0.036027"/>
+  <atom id="a169" elementType="O" formalCharge="-2" xFract="0.355135" yFract="0.214243" zFract="0.182965"/>
+  <atom id="a170" elementType="H" formalCharge="-7" xFract="0.421802" yFract="0.214243" zFract="0.182965"/>
+  <atom id="a171" elementType="H" formalCharge="-7" xFract="0.332914" yFract="0.247934" zFract="0.236027"/>
+  <atom id="a172" elementType="O" formalCharge="-2" xFract="0.355135" yFract="0.214243" zFract="0.382965"/>
+  <atom id="a173" elementType="H" formalCharge="-7" xFract="0.421802" yFract="0.214243" zFract="0.382965"/>
+  <atom id="a174" elementType="H" formalCharge="-7" xFract="0.332914" yFract="0.247934" zFract="0.436027"/>
+  <atom id="a175" elementType="O" formalCharge="-2" xFract="0.355135" yFract="0.214243" zFract="0.582965"/>
+  <atom id="a176" elementType="H" formalCharge="-7" xFract="0.421802" yFract="0.214243" zFract="0.582965"/>
+  <atom id="a177" elementType="H" formalCharge="-7" xFract="0.332914" yFract="0.247934" zFract="0.636027"/>
+  <atom id="a178" elementType="O" formalCharge="-2" xFract="0.355135" yFract="0.214243" zFract="0.782965"/>
+  <atom id="a179" elementType="H" formalCharge="-7" xFract="0.421802" yFract="0.214243" zFract="0.782965"/>
+  <atom id="a180" elementType="H" formalCharge="-7" xFract="0.332914" yFract="0.247934" zFract="0.836027"/>
+  <atom id="a181" elementType="O" formalCharge="-2" xFract="0.355135" yFract="0.414243" zFract="-0.017035"/>
+  <atom id="a182" elementType="H" formalCharge="-7" xFract="0.421802" yFract="0.414243" zFract="-0.017035"/>
+  <atom id="a183" elementType="H" formalCharge="-7" xFract="0.332914" yFract="0.447934" zFract="0.036027"/>
+  <atom id="a184" elementType="O" formalCharge="-2" xFract="0.355135" yFract="0.414243" zFract="0.182965"/>
+  <atom id="a185" elementType="H" formalCharge="-7" xFract="0.421802" yFract="0.414243" zFract="0.182965"/>
+  <atom id="a186" elementType="H" formalCharge="-7" xFract="0.332914" yFract="0.447934" zFract="0.236027"/>
+  <atom id="a187" elementType="O" formalCharge="-2" xFract="0.355135" yFract="0.414243" zFract="0.382965"/>
+  <atom id="a188" elementType="H" formalCharge="-7" xFract="0.421802" yFract="0.414243" zFract="0.382965"/>
+  <atom id="a189" elementType="H" formalCharge="-7" xFract="0.332914" yFract="0.447934" zFract="0.436027"/>
+  <atom id="a190" elementType="O" formalCharge="-2" xFract="0.355135" yFract="0.414243" zFract="0.582965"/>
+  <atom id="a191" elementType="H" formalCharge="-7" xFract="0.421802" yFract="0.414243" zFract="0.582965"/>
+  <atom id="a192" elementType="H" formalCharge="-7" xFract="0.332914" yFract="0.447934" zFract="0.636027"/>
+  <atom id="a193" elementType="O" formalCharge="-2" xFract="0.355135" yFract="0.414243" zFract="0.782965"/>
+  <atom id="a194" elementType="H" formalCharge="-7" xFract="0.421802" yFract="0.414243" zFract="0.782965"/>
+  <atom id="a195" elementType="H" formalCharge="-7" xFract="0.332914" yFract="0.447934" zFract="0.836027"/>
+  <atom id="a196" elementType="O" formalCharge="-2" xFract="0.355135" yFract="0.614243" zFract="-0.017035"/>
+  <atom id="a197" elementType="H" formalCharge="-7" xFract="0.421802" yFract="0.614243" zFract="-0.017035"/>
+  <atom id="a198" elementType="H" formalCharge="-7" xFract="0.332914" yFract="0.647934" zFract="0.036027"/>
+  <atom id="a199" elementType="O" formalCharge="-2" xFract="0.355135" yFract="0.614243" zFract="0.182965"/>
+  <atom id="a200" elementType="H" formalCharge="-7" xFract="0.421802" yFract="0.614243" zFract="0.182965"/>
+  <atom id="a201" elementType="H" formalCharge="-7" xFract="0.332914" yFract="0.647934" zFract="0.236027"/>
+  <atom id="a202" elementType="O" formalCharge="-2" xFract="0.355135" yFract="0.614243" zFract="0.382965"/>
+  <atom id="a203" elementType="H" formalCharge="-7" xFract="0.421802" yFract="0.614243" zFract="0.382965"/>
+  <atom id="a204" elementType="H" formalCharge="-7" xFract="0.332914" yFract="0.647934" zFract="0.436027"/>
+  <atom id="a205" elementType="O" formalCharge="-2" xFract="0.355135" yFract="0.614243" zFract="0.582965"/>
+  <atom id="a206" elementType="H" formalCharge="-7" xFract="0.421802" yFract="0.614243" zFract="0.582965"/>
+  <atom id="a207" elementType="H" formalCharge="-7" xFract="0.332914" yFract="0.647934" zFract="0.636027"/>
+  <atom id="a208" elementType="O" formalCharge="-2" xFract="0.355135" yFract="0.614243" zFract="0.782965"/>
+  <atom id="a209" elementType="H" formalCharge="-7" xFract="0.421802" yFract="0.614243" zFract="0.782965"/>
+  <atom id="a210" elementType="H" formalCharge="-7" xFract="0.332914" yFract="0.647934" zFract="0.836027"/>
+  <atom id="a211" elementType="O" formalCharge="-2" xFract="0.355135" yFract="0.814243" zFract="-0.017035"/>
+  <atom id="a212" elementType="H" formalCharge="-7" xFract="0.421802" yFract="0.814243" zFract="-0.017035"/>
+  <atom id="a213" elementType="H" formalCharge="-7" xFract="0.332914" yFract="0.847934" zFract="0.036027"/>
+  <atom id="a214" elementType="O" formalCharge="-2" xFract="0.355135" yFract="0.814243" zFract="0.182965"/>
+  <atom id="a215" elementType="H" formalCharge="-7" xFract="0.421802" yFract="0.814243" zFract="0.182965"/>
+  <atom id="a216" elementType="H" formalCharge="-7" xFract="0.332914" yFract="0.847934" zFract="0.236027"/>
+  <atom id="a217" elementType="O" formalCharge="-2" xFract="0.355135" yFract="0.814243" zFract="0.382965"/>
+  <atom id="a218" elementType="H" formalCharge="-7" xFract="0.421802" yFract="0.814243" zFract="0.382965"/>
+  <atom id="a219" elementType="H" formalCharge="-7" xFract="0.332914" yFract="0.847934" zFract="0.436027"/>
+  <atom id="a220" elementType="O" formalCharge="-2" xFract="0.355135" yFract="0.814243" zFract="0.582965"/>
+  <atom id="a221" elementType="H" formalCharge="-7" xFract="0.421802" yFract="0.814243" zFract="0.582965"/>
+  <atom id="a222" elementType="H" formalCharge="-7" xFract="0.332914" yFract="0.847934" zFract="0.636027"/>
+  <atom id="a223" elementType="O" formalCharge="-2" xFract="0.355135" yFract="0.814243" zFract="0.782965"/>
+  <atom id="a224" elementType="H" formalCharge="-7" xFract="0.421802" yFract="0.814243" zFract="0.782965"/>
+  <atom id="a225" elementType="H" formalCharge="-7" xFract="0.332914" yFract="0.847934" zFract="0.836027"/>
+  <atom id="a226" elementType="O" formalCharge="-2" xFract="0.555135" yFract="0.014243" zFract="-0.017035"/>
+  <atom id="a227" elementType="H" formalCharge="-7" xFract="0.621802" yFract="0.014243" zFract="-0.017035"/>
+  <atom id="a228" elementType="H" formalCharge="-7" xFract="0.532914" yFract="0.047934" zFract="0.036027"/>
+  <atom id="a229" elementType="O" formalCharge="-2" xFract="0.555135" yFract="0.014243" zFract="0.182965"/>
+  <atom id="a230" elementType="H" formalCharge="-7" xFract="0.621802" yFract="0.014243" zFract="0.182965"/>
+  <atom id="a231" elementType="H" formalCharge="-7" xFract="0.532914" yFract="0.047934" zFract="0.236027"/>
+  <atom id="a232" elementType="O" formalCharge="-2" xFract="0.555135" yFract="0.014243" zFract="0.382965"/>
+  <atom id="a233" elementType="H" formalCharge="-7" xFract="0.621802" yFract="0.014243" zFract="0.382965"/>
+  <atom id="a234" elementType="H" formalCharge="-7" xFract="0.532914" yFract="0.047934" zFract="0.436027"/>
+  <atom id="a235" elementType="O" formalCharge="-2" xFract="0.555135" yFract="0.014243" zFract="0.582965"/>
+  <atom id="a236" elementType="H" formalCharge="-7" xFract="0.621802" yFract="0.014243" zFract="0.582965"/>
+  <atom id="a237" elementType="H" formalCharge="-7" xFract="0.532914" yFract="0.047934" zFract="0.636027"/>
+  <atom id="a238" elementType="O" formalCharge="-2" xFract="0.555135" yFract="0.014243" zFract="0.782965"/>
+  <atom id="a239" elementType="H" formalCharge="-7" xFract="0.621802" yFract="0.014243" zFract="0.782965"/>
+  <atom id="a240" elementType="H" formalCharge="-7" xFract="0.532914" yFract="0.047934" zFract="0.836027"/>
+  <atom id="a241" elementType="O" formalCharge="-2" xFract="0.555135" yFract="0.214243" zFract="-0.017035"/>
+  <atom id="a242" elementType="H" formalCharge="-7" xFract="0.621802" yFract="0.214243" zFract="-0.017035"/>
+  <atom id="a243" elementType="H" formalCharge="-7" xFract="0.532914" yFract="0.247934" zFract="0.036027"/>
+  <atom id="a244" elementType="O" formalCharge="-2" xFract="0.555135" yFract="0.214243" zFract="0.182965"/>
+  <atom id="a245" elementType="H" formalCharge="-7" xFract="0.621802" yFract="0.214243" zFract="0.182965"/>
+  <atom id="a246" elementType="H" formalCharge="-7" xFract="0.532914" yFract="0.247934" zFract="0.236027"/>
+  <atom id="a247" elementType="O" formalCharge="-2" xFract="0.555135" yFract="0.214243" zFract="0.382965"/>
+  <atom id="a248" elementType="H" formalCharge="-7" xFract="0.621802" yFract="0.214243" zFract="0.382965"/>
+  <atom id="a249" elementType="H" formalCharge="-7" xFract="0.532914" yFract="0.247934" zFract="0.436027"/>
+  <atom id="a250" elementType="O" formalCharge="-2" xFract="0.555135" yFract="0.214243" zFract="0.582965"/>
+  <atom id="a251" elementType="H" formalCharge="-7" xFract="0.621802" yFract="0.214243" zFract="0.582965"/>
+  <atom id="a252" elementType="H" formalCharge="-7" xFract="0.532914" yFract="0.247934" zFract="0.636027"/>
+  <atom id="a253" elementType="O" formalCharge="-2" xFract="0.555135" yFract="0.214243" zFract="0.782965"/>
+  <atom id="a254" elementType="H" formalCharge="-7" xFract="0.621802" yFract="0.214243" zFract="0.782965"/>
+  <atom id="a255" elementType="H" formalCharge="-7" xFract="0.532914" yFract="0.247934" zFract="0.836027"/>
+  <atom id="a256" elementType="O" formalCharge="-2" xFract="0.555135" yFract="0.414243" zFract="-0.017035"/>
+  <atom id="a257" elementType="H" formalCharge="-7" xFract="0.621802" yFract="0.414243" zFract="-0.017035"/>
+  <atom id="a258" elementType="H" formalCharge="-7" xFract="0.532914" yFract="0.447934" zFract="0.036027"/>
+  <atom id="a259" elementType="O" formalCharge="-2" xFract="0.555135" yFract="0.414243" zFract="0.182965"/>
+  <atom id="a260" elementType="H" formalCharge="-7" xFract="0.621802" yFract="0.414243" zFract="0.182965"/>
+  <atom id="a261" elementType="H" formalCharge="-7" xFract="0.532914" yFract="0.447934" zFract="0.236027"/>
+  <atom id="a262" elementType="O" formalCharge="-2" xFract="0.555135" yFract="0.414243" zFract="0.382965"/>
+  <atom id="a263" elementType="H" formalCharge="-7" xFract="0.621802" yFract="0.414243" zFract="0.382965"/>
+  <atom id="a264" elementType="H" formalCharge="-7" xFract="0.532914" yFract="0.447934" zFract="0.436027"/>
+  <atom id="a265" elementType="O" formalCharge="-2" xFract="0.555135" yFract="0.414243" zFract="0.582965"/>
+  <atom id="a266" elementType="H" formalCharge="-7" xFract="0.621802" yFract="0.414243" zFract="0.582965"/>
+  <atom id="a267" elementType="H" formalCharge="-7" xFract="0.532914" yFract="0.447934" zFract="0.636027"/>
+  <atom id="a268" elementType="O" formalCharge="-2" xFract="0.555135" yFract="0.414243" zFract="0.782965"/>
+  <atom id="a269" elementType="H" formalCharge="-7" xFract="0.621802" yFract="0.414243" zFract="0.782965"/>
+  <atom id="a270" elementType="H" formalCharge="-7" xFract="0.532914" yFract="0.447934" zFract="0.836027"/>
+  <atom id="a271" elementType="O" formalCharge="-2" xFract="0.555135" yFract="0.614243" zFract="-0.017035"/>
+  <atom id="a272" elementType="H" formalCharge="-7" xFract="0.621802" yFract="0.614243" zFract="-0.017035"/>
+  <atom id="a273" elementType="H" formalCharge="-7" xFract="0.532914" yFract="0.647934" zFract="0.036027"/>
+  <atom id="a274" elementType="O" formalCharge="-2" xFract="0.555135" yFract="0.614243" zFract="0.182965"/>
+  <atom id="a275" elementType="H" formalCharge="-7" xFract="0.621802" yFract="0.614243" zFract="0.182965"/>
+  <atom id="a276" elementType="H" formalCharge="-7" xFract="0.532914" yFract="0.647934" zFract="0.236027"/>
+  <atom id="a277" elementType="O" formalCharge="-2" xFract="0.555135" yFract="0.614243" zFract="0.382965"/>
+  <atom id="a278" elementType="H" formalCharge="-7" xFract="0.621802" yFract="0.614243" zFract="0.382965"/>
+  <atom id="a279" elementType="H" formalCharge="-7" xFract="0.532914" yFract="0.647934" zFract="0.436027"/>
+  <atom id="a280" elementType="O" formalCharge="-2" xFract="0.555135" yFract="0.614243" zFract="0.582965"/>
+  <atom id="a281" elementType="H" formalCharge="-7" xFract="0.621802" yFract="0.614243" zFract="0.582965"/>
+  <atom id="a282" elementType="H" formalCharge="-7" xFract="0.532914" yFract="0.647934" zFract="0.636027"/>
+  <atom id="a283" elementType="O" formalCharge="-2" xFract="0.555135" yFract="0.614243" zFract="0.782965"/>
+  <atom id="a284" elementType="H" formalCharge="-7" xFract="0.621802" yFract="0.614243" zFract="0.782965"/>
+  <atom id="a285" elementType="H" formalCharge="-7" xFract="0.532914" yFract="0.647934" zFract="0.836027"/>
+  <atom id="a286" elementType="O" formalCharge="-2" xFract="0.555135" yFract="0.814243" zFract="-0.017035"/>
+  <atom id="a287" elementType="H" formalCharge="-7" xFract="0.621802" yFract="0.814243" zFract="-0.017035"/>
+  <atom id="a288" elementType="H" formalCharge="-7" xFract="0.532914" yFract="0.847934" zFract="0.036027"/>
+  <atom id="a289" elementType="O" formalCharge="-2" xFract="0.555135" yFract="0.814243" zFract="0.182965"/>
+  <atom id="a290" elementType="H" formalCharge="-7" xFract="0.621802" yFract="0.814243" zFract="0.182965"/>
+  <atom id="a291" elementType="H" formalCharge="-7" xFract="0.532914" yFract="0.847934" zFract="0.236027"/>
+  <atom id="a292" elementType="O" formalCharge="-2" xFract="0.555135" yFract="0.814243" zFract="0.382965"/>
+  <atom id="a293" elementType="H" formalCharge="-7" xFract="0.621802" yFract="0.814243" zFract="0.382965"/>
+  <atom id="a294" elementType="H" formalCharge="-7" xFract="0.532914" yFract="0.847934" zFract="0.436027"/>
+  <atom id="a295" elementType="O" formalCharge="-2" xFract="0.555135" yFract="0.814243" zFract="0.582965"/>
+  <atom id="a296" elementType="H" formalCharge="-7" xFract="0.621802" yFract="0.814243" zFract="0.582965"/>
+  <atom id="a297" elementType="H" formalCharge="-7" xFract="0.532914" yFract="0.847934" zFract="0.636027"/>
+  <atom id="a298" elementType="O" formalCharge="-2" xFract="0.555135" yFract="0.814243" zFract="0.782965"/>
+  <atom id="a299" elementType="H" formalCharge="-7" xFract="0.621802" yFract="0.814243" zFract="0.782965"/>
+  <atom id="a300" elementType="H" formalCharge="-7" xFract="0.532914" yFract="0.847934" zFract="0.836027"/>
+  <atom id="a301" elementType="O" formalCharge="-2" xFract="0.755135" yFract="0.014243" zFract="-0.017035"/>
+  <atom id="a302" elementType="H" formalCharge="-7" xFract="0.821802" yFract="0.014243" zFract="-0.017035"/>
+  <atom id="a303" elementType="H" formalCharge="-7" xFract="0.732914" yFract="0.047934" zFract="0.036027"/>
+  <atom id="a304" elementType="O" formalCharge="-2" xFract="0.755135" yFract="0.014243" zFract="0.182965"/>
+  <atom id="a305" elementType="H" formalCharge="-7" xFract="0.821802" yFract="0.014243" zFract="0.182965"/>
+  <atom id="a306" elementType="H" formalCharge="-7" xFract="0.732914" yFract="0.047934" zFract="0.236027"/>
+  <atom id="a307" elementType="O" formalCharge="-2" xFract="0.755135" yFract="0.014243" zFract="0.382965"/>
+  <atom id="a308" elementType="H" formalCharge="-7" xFract="0.821802" yFract="0.014243" zFract="0.382965"/>
+  <atom id="a309" elementType="H" formalCharge="-7" xFract="0.732914" yFract="0.047934" zFract="0.436027"/>
+  <atom id="a310" elementType="O" formalCharge="-2" xFract="0.755135" yFract="0.014243" zFract="0.582965"/>
+  <atom id="a311" elementType="H" formalCharge="-7" xFract="0.821802" yFract="0.014243" zFract="0.582965"/>
+  <atom id="a312" elementType="H" formalCharge="-7" xFract="0.732914" yFract="0.047934" zFract="0.636027"/>
+  <atom id="a313" elementType="O" formalCharge="-2" xFract="0.755135" yFract="0.014243" zFract="0.782965"/>
+  <atom id="a314" elementType="H" formalCharge="-7" xFract="0.821802" yFract="0.014243" zFract="0.782965"/>
+  <atom id="a315" elementType="H" formalCharge="-7" xFract="0.732914" yFract="0.047934" zFract="0.836027"/>
+  <atom id="a316" elementType="O" formalCharge="-2" xFract="0.755135" yFract="0.214243" zFract="-0.017035"/>
+  <atom id="a317" elementType="H" formalCharge="-7" xFract="0.821802" yFract="0.214243" zFract="-0.017035"/>
+  <atom id="a318" elementType="H" formalCharge="-7" xFract="0.732914" yFract="0.247934" zFract="0.036027"/>
+  <atom id="a319" elementType="O" formalCharge="-2" xFract="0.755135" yFract="0.214243" zFract="0.182965"/>
+  <atom id="a320" elementType="H" formalCharge="-7" xFract="0.821802" yFract="0.214243" zFract="0.182965"/>
+  <atom id="a321" elementType="H" formalCharge="-7" xFract="0.732914" yFract="0.247934" zFract="0.236027"/>
+  <atom id="a322" elementType="O" formalCharge="-2" xFract="0.755135" yFract="0.214243" zFract="0.382965"/>
+  <atom id="a323" elementType="H" formalCharge="-7" xFract="0.821802" yFract="0.214243" zFract="0.382965"/>
+  <atom id="a324" elementType="H" formalCharge="-7" xFract="0.732914" yFract="0.247934" zFract="0.436027"/>
+  <atom id="a325" elementType="O" formalCharge="-2" xFract="0.755135" yFract="0.214243" zFract="0.582965"/>
+  <atom id="a326" elementType="H" formalCharge="-7" xFract="0.821802" yFract="0.214243" zFract="0.582965"/>
+  <atom id="a327" elementType="H" formalCharge="-7" xFract="0.732914" yFract="0.247934" zFract="0.636027"/>
+  <atom id="a328" elementType="O" formalCharge="-2" xFract="0.755135" yFract="0.214243" zFract="0.782965"/>
+  <atom id="a329" elementType="H" formalCharge="-7" xFract="0.821802" yFract="0.214243" zFract="0.782965"/>
+  <atom id="a330" elementType="H" formalCharge="-7" xFract="0.732914" yFract="0.247934" zFract="0.836027"/>
+  <atom id="a331" elementType="O" formalCharge="-2" xFract="0.755135" yFract="0.414243" zFract="-0.017035"/>
+  <atom id="a332" elementType="H" formalCharge="-7" xFract="0.821802" yFract="0.414243" zFract="-0.017035"/>
+  <atom id="a333" elementType="H" formalCharge="-7" xFract="0.732914" yFract="0.447934" zFract="0.036027"/>
+  <atom id="a334" elementType="O" formalCharge="-2" xFract="0.755135" yFract="0.414243" zFract="0.182965"/>
+  <atom id="a335" elementType="H" formalCharge="-7" xFract="0.821802" yFract="0.414243" zFract="0.182965"/>
+  <atom id="a336" elementType="H" formalCharge="-7" xFract="0.732914" yFract="0.447934" zFract="0.236027"/>
+  <atom id="a337" elementType="O" formalCharge="-2" xFract="0.755135" yFract="0.414243" zFract="0.382965"/>
+  <atom id="a338" elementType="H" formalCharge="-7" xFract="0.821802" yFract="0.414243" zFract="0.382965"/>
+  <atom id="a339" elementType="H" formalCharge="-7" xFract="0.732914" yFract="0.447934" zFract="0.436027"/>
+  <atom id="a340" elementType="O" formalCharge="-2" xFract="0.755135" yFract="0.414243" zFract="0.582965"/>
+  <atom id="a341" elementType="H" formalCharge="-7" xFract="0.821802" yFract="0.414243" zFract="0.582965"/>
+  <atom id="a342" elementType="H" formalCharge="-7" xFract="0.732914" yFract="0.447934" zFract="0.636027"/>
+  <atom id="a343" elementType="O" formalCharge="-2" xFract="0.755135" yFract="0.414243" zFract="0.782965"/>
+  <atom id="a344" elementType="H" formalCharge="-7" xFract="0.821802" yFract="0.414243" zFract="0.782965"/>
+  <atom id="a345" elementType="H" formalCharge="-7" xFract="0.732914" yFract="0.447934" zFract="0.836027"/>
+  <atom id="a346" elementType="O" formalCharge="-2" xFract="0.755135" yFract="0.614243" zFract="-0.017035"/>
+  <atom id="a347" elementType="H" formalCharge="-7" xFract="0.821802" yFract="0.614243" zFract="-0.017035"/>
+  <atom id="a348" elementType="H" formalCharge="-7" xFract="0.732914" yFract="0.647934" zFract="0.036027"/>
+  <atom id="a349" elementType="O" formalCharge="-2" xFract="0.755135" yFract="0.614243" zFract="0.182965"/>
+  <atom id="a350" elementType="H" formalCharge="-7" xFract="0.821802" yFract="0.614243" zFract="0.182965"/>
+  <atom id="a351" elementType="H" formalCharge="-7" xFract="0.732914" yFract="0.647934" zFract="0.236027"/>
+  <atom id="a352" elementType="O" formalCharge="-2" xFract="0.755135" yFract="0.614243" zFract="0.382965"/>
+  <atom id="a353" elementType="H" formalCharge="-7" xFract="0.821802" yFract="0.614243" zFract="0.382965"/>
+  <atom id="a354" elementType="H" formalCharge="-7" xFract="0.732914" yFract="0.647934" zFract="0.436027"/>
+  <atom id="a355" elementType="O" formalCharge="-2" xFract="0.755135" yFract="0.614243" zFract="0.582965"/>
+  <atom id="a356" elementType="H" formalCharge="-7" xFract="0.821802" yFract="0.614243" zFract="0.582965"/>
+  <atom id="a357" elementType="H" formalCharge="-7" xFract="0.732914" yFract="0.647934" zFract="0.636027"/>
+  <atom id="a358" elementType="O" formalCharge="-2" xFract="0.755135" yFract="0.614243" zFract="0.782965"/>
+  <atom id="a359" elementType="H" formalCharge="-7" xFract="0.821802" yFract="0.614243" zFract="0.782965"/>
+  <atom id="a360" elementType="H" formalCharge="-7" xFract="0.732914" yFract="0.647934" zFract="0.836027"/>
+  <atom id="a361" elementType="O" formalCharge="-2" xFract="0.755135" yFract="0.814243" zFract="-0.017035"/>
+  <atom id="a362" elementType="H" formalCharge="-7" xFract="0.821802" yFract="0.814243" zFract="-0.017035"/>
+  <atom id="a363" elementType="H" formalCharge="-7" xFract="0.732914" yFract="0.847934" zFract="0.036027"/>
+  <atom id="a364" elementType="O" formalCharge="-2" xFract="0.755135" yFract="0.814243" zFract="0.182965"/>
+  <atom id="a365" elementType="H" formalCharge="-7" xFract="0.821802" yFract="0.814243" zFract="0.182965"/>
+  <atom id="a366" elementType="H" formalCharge="-7" xFract="0.732914" yFract="0.847934" zFract="0.236027"/>
+  <atom id="a367" elementType="O" formalCharge="-2" xFract="0.755135" yFract="0.814243" zFract="0.382965"/>
+  <atom id="a368" elementType="H" formalCharge="-7" xFract="0.821802" yFract="0.814243" zFract="0.382965"/>
+  <atom id="a369" elementType="H" formalCharge="-7" xFract="0.732914" yFract="0.847934" zFract="0.436027"/>
+  <atom id="a370" elementType="O" formalCharge="-2" xFract="0.755135" yFract="0.814243" zFract="0.582965"/>
+  <atom id="a371" elementType="H" formalCharge="-7" xFract="0.821802" yFract="0.814243" zFract="0.582965"/>
+  <atom id="a372" elementType="H" formalCharge="-7" xFract="0.732914" yFract="0.847934" zFract="0.636027"/>
+  <atom id="a373" elementType="O" formalCharge="-2" xFract="0.755135" yFract="0.814243" zFract="0.782965"/>
+  <atom id="a374" elementType="H" formalCharge="-7" xFract="0.821802" yFract="0.814243" zFract="0.782965"/>
+  <atom id="a375" elementType="H" formalCharge="-7" xFract="0.732914" yFract="0.847934" zFract="0.836027"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a1 a3" order="1"/>
+  <bond atomRefs2="a4 a5" order="1"/>
+  <bond atomRefs2="a4 a6" order="1"/>
+  <bond atomRefs2="a7 a8" order="1"/>
+  <bond atomRefs2="a7 a9" order="1"/>
+  <bond atomRefs2="a10 a11" order="1"/>
+  <bond atomRefs2="a10 a12" order="1"/>
+  <bond atomRefs2="a13 a14" order="1"/>
+  <bond atomRefs2="a13 a15" order="1"/>
+  <bond atomRefs2="a16 a17" order="1"/>
+  <bond atomRefs2="a16 a18" order="1"/>
+  <bond atomRefs2="a19 a20" order="1"/>
+  <bond atomRefs2="a19 a21" order="1"/>
+  <bond atomRefs2="a22 a23" order="1"/>
+  <bond atomRefs2="a22 a24" order="1"/>
+  <bond atomRefs2="a25 a26" order="1"/>
+  <bond atomRefs2="a25 a27" order="1"/>
+  <bond atomRefs2="a28 a29" order="1"/>
+  <bond atomRefs2="a28 a30" order="1"/>
+  <bond atomRefs2="a31 a32" order="1"/>
+  <bond atomRefs2="a31 a33" order="1"/>
+  <bond atomRefs2="a34 a35" order="1"/>
+  <bond atomRefs2="a34 a36" order="1"/>
+  <bond atomRefs2="a37 a38" order="1"/>
+  <bond atomRefs2="a37 a39" order="1"/>
+  <bond atomRefs2="a40 a41" order="1"/>
+  <bond atomRefs2="a40 a42" order="1"/>
+  <bond atomRefs2="a43 a44" order="1"/>
+  <bond atomRefs2="a43 a45" order="1"/>
+  <bond atomRefs2="a46 a47" order="1"/>
+  <bond atomRefs2="a46 a48" order="1"/>
+  <bond atomRefs2="a49 a50" order="1"/>
+  <bond atomRefs2="a49 a51" order="1"/>
+  <bond atomRefs2="a52 a53" order="1"/>
+  <bond atomRefs2="a52 a54" order="1"/>
+  <bond atomRefs2="a55 a56" order="1"/>
+  <bond atomRefs2="a55 a57" order="1"/>
+  <bond atomRefs2="a58 a59" order="1"/>
+  <bond atomRefs2="a58 a60" order="1"/>
+  <bond atomRefs2="a61 a62" order="1"/>
+  <bond atomRefs2="a61 a63" order="1"/>
+  <bond atomRefs2="a64 a65" order="1"/>
+  <bond atomRefs2="a64 a66" order="1"/>
+  <bond atomRefs2="a67 a68" order="1"/>
+  <bond atomRefs2="a67 a69" order="1"/>
+  <bond atomRefs2="a70 a71" order="1"/>
+  <bond atomRefs2="a70 a72" order="1"/>
+  <bond atomRefs2="a73 a74" order="1"/>
+  <bond atomRefs2="a73 a75" order="1"/>
+  <bond atomRefs2="a76 a78" order="1"/>
+  <bond atomRefs2="a76 a77" order="1"/>
+  <bond atomRefs2="a79 a81" order="1"/>
+  <bond atomRefs2="a79 a80" order="1"/>
+  <bond atomRefs2="a82 a84" order="1"/>
+  <bond atomRefs2="a82 a83" order="1"/>
+  <bond atomRefs2="a85 a87" order="1"/>
+  <bond atomRefs2="a85 a86" order="1"/>
+  <bond atomRefs2="a88 a90" order="1"/>
+  <bond atomRefs2="a88 a89" order="1"/>
+  <bond atomRefs2="a91 a93" order="1"/>
+  <bond atomRefs2="a91 a92" order="1"/>
+  <bond atomRefs2="a94 a96" order="1"/>
+  <bond atomRefs2="a94 a95" order="1"/>
+  <bond atomRefs2="a97 a99" order="1"/>
+  <bond atomRefs2="a97 a98" order="1"/>
+  <bond atomRefs2="a100 a102" order="1"/>
+  <bond atomRefs2="a100 a101" order="1"/>
+  <bond atomRefs2="a103 a105" order="1"/>
+  <bond atomRefs2="a103 a104" order="1"/>
+  <bond atomRefs2="a106 a108" order="1"/>
+  <bond atomRefs2="a106 a107" order="1"/>
+  <bond atomRefs2="a109 a111" order="1"/>
+  <bond atomRefs2="a109 a110" order="1"/>
+  <bond atomRefs2="a112 a114" order="1"/>
+  <bond atomRefs2="a112 a113" order="1"/>
+  <bond atomRefs2="a115 a117" order="1"/>
+  <bond atomRefs2="a115 a116" order="1"/>
+  <bond atomRefs2="a118 a120" order="1"/>
+  <bond atomRefs2="a118 a119" order="1"/>
+  <bond atomRefs2="a121 a123" order="1"/>
+  <bond atomRefs2="a121 a122" order="1"/>
+  <bond atomRefs2="a124 a126" order="1"/>
+  <bond atomRefs2="a124 a125" order="1"/>
+  <bond atomRefs2="a127 a129" order="1"/>
+  <bond atomRefs2="a127 a128" order="1"/>
+  <bond atomRefs2="a130 a132" order="1"/>
+  <bond atomRefs2="a130 a131" order="1"/>
+  <bond atomRefs2="a133 a135" order="1"/>
+  <bond atomRefs2="a133 a134" order="1"/>
+  <bond atomRefs2="a136 a138" order="1"/>
+  <bond atomRefs2="a136 a137" order="1"/>
+  <bond atomRefs2="a139 a141" order="1"/>
+  <bond atomRefs2="a139 a140" order="1"/>
+  <bond atomRefs2="a142 a144" order="1"/>
+  <bond atomRefs2="a142 a143" order="1"/>
+  <bond atomRefs2="a145 a147" order="1"/>
+  <bond atomRefs2="a145 a146" order="1"/>
+  <bond atomRefs2="a148 a150" order="1"/>
+  <bond atomRefs2="a148 a149" order="1"/>
+  <bond atomRefs2="a151 a153" order="1"/>
+  <bond atomRefs2="a151 a152" order="1"/>
+  <bond atomRefs2="a154 a156" order="1"/>
+  <bond atomRefs2="a154 a155" order="1"/>
+  <bond atomRefs2="a157 a159" order="1"/>
+  <bond atomRefs2="a157 a158" order="1"/>
+  <bond atomRefs2="a160 a162" order="1"/>
+  <bond atomRefs2="a160 a161" order="1"/>
+  <bond atomRefs2="a163 a165" order="1"/>
+  <bond atomRefs2="a163 a164" order="1"/>
+  <bond atomRefs2="a166 a168" order="1"/>
+  <bond atomRefs2="a166 a167" order="1"/>
+  <bond atomRefs2="a169 a171" order="1"/>
+  <bond atomRefs2="a169 a170" order="1"/>
+  <bond atomRefs2="a172 a174" order="1"/>
+  <bond atomRefs2="a172 a173" order="1"/>
+  <bond atomRefs2="a175 a177" order="1"/>
+  <bond atomRefs2="a175 a176" order="1"/>
+  <bond atomRefs2="a178 a180" order="1"/>
+  <bond atomRefs2="a178 a179" order="1"/>
+  <bond atomRefs2="a181 a183" order="1"/>
+  <bond atomRefs2="a181 a182" order="1"/>
+  <bond atomRefs2="a184 a186" order="1"/>
+  <bond atomRefs2="a184 a185" order="1"/>
+  <bond atomRefs2="a187 a189" order="1"/>
+  <bond atomRefs2="a187 a188" order="1"/>
+  <bond atomRefs2="a190 a192" order="1"/>
+  <bond atomRefs2="a190 a191" order="1"/>
+  <bond atomRefs2="a193 a195" order="1"/>
+  <bond atomRefs2="a193 a194" order="1"/>
+  <bond atomRefs2="a196 a198" order="1"/>
+  <bond atomRefs2="a196 a197" order="1"/>
+  <bond atomRefs2="a199 a201" order="1"/>
+  <bond atomRefs2="a199 a200" order="1"/>
+  <bond atomRefs2="a202 a204" order="1"/>
+  <bond atomRefs2="a202 a203" order="1"/>
+  <bond atomRefs2="a205 a207" order="1"/>
+  <bond atomRefs2="a205 a206" order="1"/>
+  <bond atomRefs2="a208 a210" order="1"/>
+  <bond atomRefs2="a208 a209" order="1"/>
+  <bond atomRefs2="a211 a213" order="1"/>
+  <bond atomRefs2="a211 a212" order="1"/>
+  <bond atomRefs2="a214 a216" order="1"/>
+  <bond atomRefs2="a214 a215" order="1"/>
+  <bond atomRefs2="a217 a219" order="1"/>
+  <bond atomRefs2="a217 a218" order="1"/>
+  <bond atomRefs2="a220 a222" order="1"/>
+  <bond atomRefs2="a220 a221" order="1"/>
+  <bond atomRefs2="a223 a225" order="1"/>
+  <bond atomRefs2="a223 a224" order="1"/>
+  <bond atomRefs2="a226 a227" order="1"/>
+  <bond atomRefs2="a226 a228" order="1"/>
+  <bond atomRefs2="a229 a230" order="1"/>
+  <bond atomRefs2="a229 a231" order="1"/>
+  <bond atomRefs2="a232 a233" order="1"/>
+  <bond atomRefs2="a232 a234" order="1"/>
+  <bond atomRefs2="a235 a236" order="1"/>
+  <bond atomRefs2="a235 a237" order="1"/>
+  <bond atomRefs2="a238 a239" order="1"/>
+  <bond atomRefs2="a238 a240" order="1"/>
+  <bond atomRefs2="a241 a242" order="1"/>
+  <bond atomRefs2="a241 a243" order="1"/>
+  <bond atomRefs2="a244 a245" order="1"/>
+  <bond atomRefs2="a244 a246" order="1"/>
+  <bond atomRefs2="a247 a248" order="1"/>
+  <bond atomRefs2="a247 a249" order="1"/>
+  <bond atomRefs2="a250 a251" order="1"/>
+  <bond atomRefs2="a250 a252" order="1"/>
+  <bond atomRefs2="a253 a254" order="1"/>
+  <bond atomRefs2="a253 a255" order="1"/>
+  <bond atomRefs2="a256 a257" order="1"/>
+  <bond atomRefs2="a256 a258" order="1"/>
+  <bond atomRefs2="a259 a260" order="1"/>
+  <bond atomRefs2="a259 a261" order="1"/>
+  <bond atomRefs2="a262 a263" order="1"/>
+  <bond atomRefs2="a262 a264" order="1"/>
+  <bond atomRefs2="a265 a266" order="1"/>
+  <bond atomRefs2="a265 a267" order="1"/>
+  <bond atomRefs2="a268 a269" order="1"/>
+  <bond atomRefs2="a268 a270" order="1"/>
+  <bond atomRefs2="a271 a272" order="1"/>
+  <bond atomRefs2="a271 a273" order="1"/>
+  <bond atomRefs2="a274 a275" order="1"/>
+  <bond atomRefs2="a274 a276" order="1"/>
+  <bond atomRefs2="a277 a278" order="1"/>
+  <bond atomRefs2="a277 a279" order="1"/>
+  <bond atomRefs2="a280 a281" order="1"/>
+  <bond atomRefs2="a280 a282" order="1"/>
+  <bond atomRefs2="a283 a284" order="1"/>
+  <bond atomRefs2="a283 a285" order="1"/>
+  <bond atomRefs2="a286 a287" order="1"/>
+  <bond atomRefs2="a286 a288" order="1"/>
+  <bond atomRefs2="a289 a290" order="1"/>
+  <bond atomRefs2="a289 a291" order="1"/>
+  <bond atomRefs2="a292 a293" order="1"/>
+  <bond atomRefs2="a292 a294" order="1"/>
+  <bond atomRefs2="a295 a296" order="1"/>
+  <bond atomRefs2="a295 a297" order="1"/>
+  <bond atomRefs2="a298 a299" order="1"/>
+  <bond atomRefs2="a298 a300" order="1"/>
+  <bond atomRefs2="a301 a303" order="1"/>
+  <bond atomRefs2="a301 a302" order="1"/>
+  <bond atomRefs2="a304 a306" order="1"/>
+  <bond atomRefs2="a304 a305" order="1"/>
+  <bond atomRefs2="a307 a309" order="1"/>
+  <bond atomRefs2="a307 a308" order="1"/>
+  <bond atomRefs2="a310 a312" order="1"/>
+  <bond atomRefs2="a310 a311" order="1"/>
+  <bond atomRefs2="a313 a315" order="1"/>
+  <bond atomRefs2="a313 a314" order="1"/>
+  <bond atomRefs2="a316 a318" order="1"/>
+  <bond atomRefs2="a316 a317" order="1"/>
+  <bond atomRefs2="a319 a321" order="1"/>
+  <bond atomRefs2="a319 a320" order="1"/>
+  <bond atomRefs2="a322 a324" order="1"/>
+  <bond atomRefs2="a322 a323" order="1"/>
+  <bond atomRefs2="a325 a327" order="1"/>
+  <bond atomRefs2="a325 a326" order="1"/>
+  <bond atomRefs2="a328 a330" order="1"/>
+  <bond atomRefs2="a328 a329" order="1"/>
+  <bond atomRefs2="a331 a333" order="1"/>
+  <bond atomRefs2="a331 a332" order="1"/>
+  <bond atomRefs2="a334 a336" order="1"/>
+  <bond atomRefs2="a334 a335" order="1"/>
+  <bond atomRefs2="a337 a339" order="1"/>
+  <bond atomRefs2="a337 a338" order="1"/>
+  <bond atomRefs2="a340 a342" order="1"/>
+  <bond atomRefs2="a340 a341" order="1"/>
+  <bond atomRefs2="a343 a345" order="1"/>
+  <bond atomRefs2="a343 a344" order="1"/>
+  <bond atomRefs2="a346 a348" order="1"/>
+  <bond atomRefs2="a346 a347" order="1"/>
+  <bond atomRefs2="a349 a351" order="1"/>
+  <bond atomRefs2="a349 a350" order="1"/>
+  <bond atomRefs2="a352 a354" order="1"/>
+  <bond atomRefs2="a352 a353" order="1"/>
+  <bond atomRefs2="a355 a357" order="1"/>
+  <bond atomRefs2="a355 a356" order="1"/>
+  <bond atomRefs2="a358 a360" order="1"/>
+  <bond atomRefs2="a358 a359" order="1"/>
+  <bond atomRefs2="a361 a363" order="1"/>
+  <bond atomRefs2="a361 a362" order="1"/>
+  <bond atomRefs2="a364 a366" order="1"/>
+  <bond atomRefs2="a364 a365" order="1"/>
+  <bond atomRefs2="a367 a369" order="1"/>
+  <bond atomRefs2="a367 a368" order="1"/>
+  <bond atomRefs2="a370 a372" order="1"/>
+  <bond atomRefs2="a370 a371" order="1"/>
+  <bond atomRefs2="a373 a375" order="1"/>
+  <bond atomRefs2="a373 a374" order="1"/>
+ </bondArray>
+</molecule>

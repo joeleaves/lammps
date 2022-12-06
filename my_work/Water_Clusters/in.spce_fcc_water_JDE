@@ -22,7 +22,7 @@ create_box	3 box 		&
 			extra/special/per/atom 2
 
 neighbor		2.5 bin
-neigh_modify	every 1 delay 0 check yes
+neigh_modify	every 10 delay 0 check no
 
 molecule		water spce-water.txt
 
@@ -37,7 +37,7 @@ pair_modify	tail yes
 kspace_style	pppm 1.0e-6
 
 #pair coeff i j kij rij
-pair_coeff 1 1 0.1553 3.166
+pair_coeff 1 1 0.1553537 3.166
 pair_coeff 1 2 0.0 0.0
 pair_coeff 2 2 0.0 0.0
 pair_coeff 3 3 0.0 0.0
@@ -48,11 +48,12 @@ bond_style	harmonic
 
 angle_style	harmonic
 
-bond_coeff        1 1000 1.0
+#bond_coeff        1 1000 1.0
 
-angle_coeff		1 100 109.47
+#angle_coeff		1 100 109.47
 
-special_bonds	lj/coul 0.0 0.0 0.5
+#JDE Turning this off
+#special_bonds	lj/coul 0.0 0.0 0.5
 
 mass 1 15.9994
 mass 2 2.014
@@ -94,13 +95,14 @@ timestep		${ts}
 
 #unfix		tstat
 
-fix		micro all nve
-fix		rescale all temp/rescale 500 ${myT} ${myT} 5.0 1.00
-fix		rattle all rattle 0.0001 50 10 t 1 2 3 b 1 a 1
+fix		my_micro all nve
+fix my_nvt all nvt temp ${myT} ${myT} 100.0
+#fix		my_rescale all temp/rescale 50 ${myT} ${myT} 0.0 1.00
+fix		my_rattle all rattle 0.0001 50 10 t 1 2 3 b 1 a 1
 
 run		15000
 
-unfix		rescale
+unfix	my_rescale
 
 run		5000
 
@@ -108,27 +110,44 @@ run		5000
 
 
 #Dipole Calc By Hand:
-variable        mindivx atom vx*q
-compute s1x all reduce sum v_mindivx
+#variable        mindivx atom vx*q
+#compute s1x all reduce sum v_mindivx
 
-variable        mindivy atom vy*q
-compute s1y all reduce sum v_mindivy
+#variable        mindivy atom vy*q
+#compute s1y all reduce sum v_mindivy
 
-variable        mindivz atom vz*q
-compute s1z all reduce sum v_mindivz
+#variable        mindivz atom vz*q
+#compute s1z all reduce sum v_mindivz
 
 #fix             mall all ave/time 1 1 1 c_s1x c_s1y c_s1z file spce_dipv_TRAJ.txt mode scalar
 
 
 #F (O = 112, H1 = 113)
 
-variable rmoh		equal (15.9994*1.00794)/(1.00794+15.9994)
+#variable rmoh		equal (15.9994*1.00794)/(1.00794+15.9994)
 
-variable fffx		equal "v_rmoh*((fx[112]/15.9994) - (fx[113]/1.00794))"
-variable fffy		equal "v_rmoh*((fy[112]/15.9994) - (fy[113]/1.00794))"
-variable fffz		equal "v_rmoh*((fz[112]/15.9994) - (fz[113]/1.00794))"
+#variable fffx		equal "v_rmoh*((fx[112]/15.9994) - (fx[113]/1.00794))"
+#variable fffy		equal "v_rmoh*((fy[112]/15.9994) - (fy[113]/1.00794))"
+#variable fffz		equal "v_rmoh*((fz[112]/15.9994) - (fz[113]/1.00794))"
 
-fix                     fprnt all ave/time 1 1 1 v_fffx v_fffy v_fffz file spce_ff_p1.txt mode scalar
+#JDE's changes:
+variable roh_x equal "xu[112]-xu[113]"
+variable roh_y equal "yu[112]-yu[113]"
+variable roh_z equal "zu[112]-zu[113]"
+
+variable fHx equal "fx[113]"
+variable fHy equal "fy[113]"
+variable fHz equal "fz[113]"
+
+variable fOx equal "fx[112]"
+variable fOy equal "fy[112]"
+variable fOz equal "fz[112]"
+
+dump jde_rOH all custom 50 dump_rOH.txt roh_x roh_y roh_z
+dump jde_fH all custom 50 dump_fH.txt fHx fHy fHz
+dump jde_fO all custom 50 dump_fO.txt fOx fOy fOz 
+
+#fix fprnt all ave/time 1 1 1 v_fffx v_fffy v_fffz file spce_ff_p1.txt mode scalar
 
 
 #e
@@ -145,8 +164,8 @@ fix                     fprnt all ave/time 1 1 1 v_fffx v_fffy v_fffz file spce_
 
 #fix                     fprint all ave/time 1 1 1 v_fhx v_fhy v_fhz file spce_fh_s8.txt mode scalar
 
-dump		eeo interesto custom 1 dump_eeO_p1.txt id xu yu zu vx vy vz fx fy fz
-dump		eeh interesth custom 1 dump_eeH_p1.txt id xu yu zu vx vy vz fx fy fz
+#dump		eeo interesto custom 1 dump_eeO_p1.txt id xu yu zu vx vy vz fx fy fz
+#dump		eeh interesth custom 1 dump_eeH_p1.txt id xu yu zu vx vy vz fx fy fz
 
 
 run		110000

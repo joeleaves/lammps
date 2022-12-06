@@ -1,0 +1,13 @@
+#Using default tolerance, which will ensure that all atoms on different molecules are at least 2.0 Angstroms apart.
+tolerance 2.0
+
+#Specify the output file, which will be a crystal in pdb format.
+output packmol_SPCE_crystal.pdb
+
+#Read in the file for one water molecule, put it in a cubic box that is 13 angstroms on a side.
+structure SPCE_Water_Molecule.pdb
+	  number 125
+	  inside cube 0.0 0.0 0.0 13.0
+end structure
+
+
