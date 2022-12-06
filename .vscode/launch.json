@@ -1,0 +1,57 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "(lldb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/lmp",
+            "args": ["-in", "${workspaceFolder}/examples/melt/in.melt"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb"
+        },
+        {
+            "name": "Bulk Water from Avogadro",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/lmp",
+            "args": ["-in", "${workspaceFolder}/my_work/Water_Clusters/SPCE_Water_JDE_Input.in.lmp"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/my_work/Water_Clusters",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb"
+        },
+        {
+            "name": "HOD in D2O",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/lmp",
+            "args": ["-in", "${workspaceFolder}/my_work/Water_Clusters/SPCE_HOD_D2O_Input.in.lmp"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/my_work/Water_Clusters",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb"
+        },
+        {
+            "name": "Pyrene with one water",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/lmp",
+            "args": ["-in", "${workspaceFolder}/my_work/Water_Clusters/in.pyr_1water"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/my_work/Water_Clusters",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb"
+        }
+    ]
+}
