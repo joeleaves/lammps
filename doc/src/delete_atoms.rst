@@ -73,7 +73,7 @@ keyword discussion below.
 
 For style *overlap* pairs of atoms whose distance of separation is
 within the specified cutoff distance are searched for, and one of the
-2 atoms is deleted.  Only pairs where one of the two atoms is in the
+two atoms is deleted.  Only pairs where one of the two atoms is in the
 first group specified and the other atom is in the second group are
 considered.  The atom that is in the first group is the one that is
 deleted.
@@ -135,7 +135,7 @@ number of atoms in the system.  Note that this is not done for
 molecular systems (see the :doc:`atom_style <atom_style>` command),
 regardless of the *compress* setting, since it would foul up the bond
 connectivity that has already been assigned.  However, the
-:doc:`reset_atom_ids <reset_atom_ids>` command can be used after this
+:doc:`reset_atoms id <reset_atoms>` command can be used after this
 command to accomplish the same thing.
 
 Note that the re-assignment of IDs is not really a compression, where
@@ -203,7 +203,7 @@ using molecule template files via the :doc:`molecule <molecule>` and
 Related commands
 """"""""""""""""
 
-:doc:`create_atoms <create_atoms>`, :doc:`reset_atom_ids <reset_atom_ids>`
+:doc:`create_atoms <create_atoms>`, :doc:`reset_atoms id <reset_atoms>`
 
 Default
 """""""

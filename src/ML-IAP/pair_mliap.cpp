@@ -21,6 +21,9 @@
 #include "mliap_data.h"
 #include "mliap_descriptor_snap.h"
 #include "mliap_descriptor_so3.h"
+#ifdef MLIAP_ACE
+#include "mliap_descriptor_ace.h"
+#endif
 #include "mliap_model_linear.h"
 #include "mliap_model_nn.h"
 #include "mliap_model_quadratic.h"
@@ -30,12 +33,10 @@
 #endif
 
 #include "atom.h"
-#include "comm.h"
 #include "error.h"
 #include "force.h"
 #include "memory.h"
 #include "neighbor.h"
-#include "neigh_request.h"
 
 #include <cmath>
 #include <cstring>
@@ -51,7 +52,10 @@ PairMLIAP::PairMLIAP(LAMMPS *lmp) :
   restartinfo = 0;
   one_coeff = 1;
   manybody_flag = 1;
+  is_child = false;
   centroidstressflag = CENTROID_NOTAVAIL;
+  model=nullptr;
+  descriptor=nullptr;
 }
 
 /* ---------------------------------------------------------------------- */
@@ -63,7 +67,9 @@ PairMLIAP::~PairMLIAP()
   delete model;
   delete descriptor;
   delete data;
-
+  model=nullptr;
+  descriptor=nullptr;
+  data=nullptr;
   if (allocated) {
     memory->destroy(setflag);
     memory->destroy(cutsq);
@@ -80,7 +86,6 @@ void PairMLIAP::compute(int eflag, int vflag)
 {
 
   // consistency checks
-
   if (data->ndescriptors != model->ndescriptors)
     error->all(FLERR, "Inconsistent model and descriptor descriptor count: {} vs {}",
                model->ndescriptors, data->ndescriptors);
@@ -131,19 +136,18 @@ void PairMLIAP::allocate()
 
 void PairMLIAP::settings(int narg, char ** arg)
 {
-  if (narg < 2) utils::missing_cmd_args(FLERR, "pair_style mliap", error);
 
-  // set flags for required keywords
-
-  delete model;
-  model = nullptr;
-  delete descriptor;
-  descriptor = nullptr;
+  // This is needed because the unit test calls settings twice
+  if (!is_child) {
+    if (narg < 2) utils::missing_cmd_args(FLERR, "pair_style mliap", error);
+    delete model;
+    model = nullptr;
+    delete descriptor;
+    descriptor = nullptr;
+  }
 
   // process keywords
-
   int iarg = 0;
-
   while (iarg < narg) {
     if (strcmp(arg[iarg],"model") == 0) {
       if (iarg+2 > narg) utils::missing_cmd_args(FLERR, "pair_style mliap model", error);
@@ -180,8 +184,16 @@ void PairMLIAP::settings(int narg, char ** arg)
         if (iarg+3 > narg) utils::missing_cmd_args(FLERR, "pair_style mliap descriptor so3", error);
         descriptor = new MLIAPDescriptorSO3(lmp,arg[iarg+2]);
         iarg += 3;
-
-      } else error->all(FLERR,"Illegal pair_style mliap command");
+      }
+#ifdef MLIAP_ACE
+        else if (strcmp(arg[iarg+1],"ace") == 0) {
+        if (iarg+3 > narg) error->all(FLERR,"Illegal pair_style mliap command");
+        if (lmp->kokkos) error->all(FLERR,"Cannot (yet) use KOKKOS package with ACE descriptors");
+        descriptor = new MLIAPDescriptorACE(lmp,arg[iarg+2]);
+        iarg += 3;
+      }
+#endif
+      else error->all(FLERR,"Illegal pair_style mliap command");
     } else if (strcmp(arg[iarg], "unified") == 0) {
 #ifdef MLIAP_PYTHON
       if (model != nullptr) error->all(FLERR,"Illegal multiple pair_style mliap model definitions");
@@ -259,7 +271,7 @@ void PairMLIAP::coeff(int narg, char **arg)
 
   model->init();
   descriptor->init();
-  int gradgradflag = -1;
+  constexpr int gradgradflag = -1;
   delete data;
   data = new MLIAPData(lmp, gradgradflag, map, model, descriptor, this);
   data->init();

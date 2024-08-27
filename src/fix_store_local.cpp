@@ -14,7 +14,6 @@
 #include "fix_store_local.h"
 
 #include "atom.h"
-#include "comm.h"
 #include "error.h"
 #include "memory.h"
 #include "update.h"
@@ -22,7 +21,7 @@
 using namespace LAMMPS_NS;
 using namespace FixConst;
 
-#define DELTA 1024
+static constexpr int DELTA = 1024;
 
 /* ---------------------------------------------------------------------- */
 

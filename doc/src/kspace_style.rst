@@ -283,7 +283,7 @@ parameters and how to choose them is described in
 ----------
 
 The *electrode* styles add methods that are required for the constant potential
-method implemented in :doc:`fix electrode/* <fix_electrode_conp>`.  The styles
+method implemented in :doc:`fix electrode/* <fix_electrode>`.  The styles
 *ewald/electrode*, *pppm/electrode* and *pppm/electrode/intel* are available.
 These styles do not support the `kspace_modify slab nozforce` command.
 
@@ -450,7 +450,10 @@ relative RMS error.
   For the KOKKOS package, the *pppm/kk* style performs charge
   assignment and force interpolation calculations, along with the FFTs
   themselves, on the GPU or (optionally) threaded on the CPU when
-  using OpenMP and FFTW3.
+  using OpenMP and FFTW3. The specific FFT library is selected using
+  the FFT_KOKKOS CMake parameter. See the
+  :doc:`Build settings <Build_settings>` doc page for how to select a
+  3rd-party FFT library.
 
 ----------
 

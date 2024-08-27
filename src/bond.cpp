@@ -36,12 +36,13 @@ int Bond::instance_total = 0;
    a particular bond style can override this
 ------------------------------------------------------------------------- */
 
-Bond::Bond(LAMMPS *_lmp) : Pointers(_lmp)
+Bond::Bond(LAMMPS *_lmp) :
+    Pointers(_lmp), setflag(nullptr), virial{0.0, 0.0, 0.0, 0.0, 0.0, 0.0}, eatom(nullptr),
+    vatom(nullptr), svector(nullptr)
 {
   instance_me = instance_total++;
 
   energy = 0.0;
-  virial[0] = virial[1] = virial[2] = virial[3] = virial[4] = virial[5] = 0.0;
   writedata = 1;
   reinitflag = 1;
 
@@ -53,18 +54,13 @@ Bond::Bond(LAMMPS *_lmp) : Pointers(_lmp)
   partial_flag = 0;
 
   single_extra = 0;
-  svector = nullptr;
 
   maxeatom = maxvatom = 0;
-  eatom = nullptr;
-  vatom = nullptr;
-  setflag = nullptr;
 
   execution_space = Host;
   datamask_read = ALL_MASK;
   datamask_modify = ALL_MASK;
-
-  copymode = 0;
+  copymode = kokkosable = 0;
 }
 
 /* ---------------------------------------------------------------------- */
@@ -349,17 +345,20 @@ void Bond::write_file(int narg, char **arg)
   if (narg == 8) {
     itype = utils::inumeric(FLERR, arg[6], false, lmp);
     jtype = utils::inumeric(FLERR, arg[7], false, lmp);
-    if (itype < 1 || itype > atom->ntypes || jtype < 1 || jtype > atom->ntypes)
-      error->all(FLERR, "Invalid atom types in bond_write command");
+    if ((itype < 1) || (itype > atom->ntypes))
+      error->all(FLERR, "Invalid atom type {} in bond_write command", itype);
+    if ((jtype < 1) || (jtype > atom->ntypes))
+      error->all(FLERR, "Invalid atom type {} in bond_write command", jtype);
   }
 
   int btype = utils::inumeric(FLERR, arg[0], false, lmp);
   int n = utils::inumeric(FLERR, arg[1], false, lmp);
   double inner = utils::numeric(FLERR, arg[2], false, lmp);
   double outer = utils::numeric(FLERR, arg[3], false, lmp);
-  if (inner <= 0.0 || inner >= outer)
-    error->all(FLERR, "Invalid rlo/rhi values in bond_write command");
+  if ((inner <= 0.0) || (inner >= outer))
+    error->all(FLERR, "Invalid rlo={} / rhi={} values in bond_write command.", inner, outer);
 
+  if (n < 2) error->all(FLERR, "Must have at least 2 table values");
   double r0 = equilibrium_distance(btype);
 
   // open file in append mode if exists
@@ -397,7 +396,7 @@ void Bond::write_file(int narg, char **arg)
   }
 
   // initialize potentials before evaluating bond potential
-  // insures all bond coeffs are set and force constants
+  // ensures all bond coeffs are set and force constants
   // also initialize neighbor so that neighbor requests are processed
   // NOTE: might be safest to just do lmp->init()
 
@@ -418,7 +417,7 @@ void Bond::write_file(int narg, char **arg)
     for (int i = 0; i < n; i++) {
       r = inner + dr * static_cast<double>(i);
       e = single(btype, r * r, itype, jtype, f);
-      fprintf(fp, "%d %.15g %.15g %.15g\n", i + 1, r, e, f * r);
+      fprintf(fp, "%8d %- 22.15g %- 22.15g %- 22.15g\n", i + 1, r, e, f * r);
     }
     fclose(fp);
   }

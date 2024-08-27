@@ -42,7 +42,7 @@
 
 using namespace LAMMPS_NS;
 
-#define BUFEXTRA 1024
+static constexpr int BUFEXTRA = 1024;
 
 enum{ONELEVEL,TWOLEVEL,NUMA,CUSTOM};
 enum{CART,CARTREORDER,XYZ};
@@ -91,7 +91,7 @@ Comm::Comm(LAMMPS *lmp) : Pointers(lmp)
   nthreads = 1;
 #ifdef _OPENMP
   if (lmp->kokkos) {
-    nthreads = lmp->kokkos->nthreads * lmp->kokkos->numa;
+    nthreads = lmp->kokkos->nthreads;
   } else if (getenv("OMP_NUM_THREADS") == nullptr) {
     nthreads = 1;
     if (me == 0)
@@ -420,6 +420,7 @@ void Comm::set_processors(int narg, char **arg)
     error->all(FLERR,"Specified processors != physical processors");
 
   int iarg = 3;
+  numa_nodes = 2;
   while (iarg < narg) {
     if (strcmp(arg[iarg],"grid") == 0) {
       if (iarg+2 > narg) error->all(FLERR,"Illegal processors command");
@@ -514,6 +515,12 @@ void Comm::set_processors(int narg, char **arg)
       outfile = utils::strdup(arg[iarg+1]);
       iarg += 2;
 
+    } else if (strcmp(arg[iarg],"numa_nodes") == 0) {
+      if (iarg+2 > narg) error->all(FLERR,"Illegal processors command");
+      numa_nodes = utils::inumeric(FLERR,arg[iarg+1],false,lmp);
+      if (numa_nodes < 1) numa_nodes = 2;
+      iarg += 2;
+
     } else error->all(FLERR,"Illegal processors command");
   }
 
@@ -565,7 +572,7 @@ void Comm::set_proc_grid(int outflag)
                         otherflag,other_style,other_procgrid,other_coregrid);
 
   } else if (gridflag == NUMA) {
-    pmap->numa_grid(nprocs,user_procgrid,procgrid,coregrid);
+    pmap->numa_grid(numa_nodes,nprocs,user_procgrid,procgrid,coregrid);
 
   } else if (gridflag == CUSTOM) {
     pmap->custom_grid(customfile,nprocs,user_procgrid,procgrid);
@@ -794,103 +801,6 @@ int Comm::coord2proc(double *x, int &igx, int &igy, int &igz)
   if (igz >= procgrid[2]) igz = procgrid[2] - 1;
 
   return grid2proc[igx][igy][igz];
-}
-
-/* ----------------------------------------------------------------------
-   partition a global regular grid into one brick-shaped sub-grid per proc
-   if grid point is inside my sub-domain I own it,
-     this includes sub-domain lo boundary but excludes hi boundary
-   nx,ny,nz = extent of global grid
-     indices into the global grid range from 0 to N-1 in each dim
-   zfactor = 0.0 if the grid exactly covers the simulation box
-   zfactor > 1.0 if the grid extends beyond the +z boundary by this factor
-     used by 2d slab-mode PPPM
-     this effectively maps proc sub-grids to a smaller subset of the grid
-   nxyz lo/hi = inclusive lo/hi bounds of global grid sub-brick I own
-   if proc owns no grid cells in a dim, then nlo > nhi
-   special case: 2 procs share boundary which a grid point is exactly on
-     2 equality if tests insure a consistent decision as to which proc owns it
-------------------------------------------------------------------------- */
-
-void Comm::partition_grid(int nx, int ny, int nz, double zfactor,
-                          int &nxlo, int &nxhi, int &nylo, int &nyhi,
-                          int &nzlo, int &nzhi)
-{
-  double xfraclo,xfrachi,yfraclo,yfrachi,zfraclo,zfrachi;
-
-  if (layout != LAYOUT_TILED) {
-    xfraclo = xsplit[myloc[0]];
-    xfrachi = xsplit[myloc[0]+1];
-    yfraclo = ysplit[myloc[1]];
-    yfrachi = ysplit[myloc[1]+1];
-    zfraclo = zsplit[myloc[2]];
-    zfrachi = zsplit[myloc[2]+1];
-  } else {
-    xfraclo = mysplit[0][0];
-    xfrachi = mysplit[0][1];
-    yfraclo = mysplit[1][0];
-    yfrachi = mysplit[1][1];
-    zfraclo = mysplit[2][0];
-    zfrachi = mysplit[2][1];
-  }
-
-  nxlo = static_cast<int> (xfraclo * nx);
-  if (1.0*nxlo != xfraclo*nx) nxlo++;
-  nxhi = static_cast<int> (xfrachi * nx);
-  if (1.0*nxhi == xfrachi*nx) nxhi--;
-
-  nylo = static_cast<int> (yfraclo * ny);
-  if (1.0*nylo != yfraclo*ny) nylo++;
-  nyhi = static_cast<int> (yfrachi * ny);
-  if (1.0*nyhi == yfrachi*ny) nyhi--;
-
-  if (zfactor == 0.0) {
-    nzlo = static_cast<int> (zfraclo * nz);
-    if (1.0*nzlo != zfraclo*nz) nzlo++;
-    nzhi = static_cast<int> (zfrachi * nz);
-    if (1.0*nzhi == zfrachi*nz) nzhi--;
-  } else {
-    nzlo = static_cast<int> (zfraclo * nz/zfactor);
-    if (1.0*nzlo != zfraclo*nz) nzlo++;
-    nzhi = static_cast<int> (zfrachi * nz/zfactor);
-    if (1.0*nzhi == zfrachi*nz) nzhi--;
-  }
-
-  // OLD code
-  // could sometimes map grid points slightly outside a proc to the proc
-
-  /*
-  if (layout != LAYOUT_TILED) {
-    nxlo = static_cast<int> (xsplit[myloc[0]] * nx);
-    nxhi = static_cast<int> (xsplit[myloc[0]+1] * nx) - 1;
-
-    nylo = static_cast<int> (ysplit[myloc[1]] * ny);
-    nyhi = static_cast<int> (ysplit[myloc[1]+1] * ny) - 1;
-
-    if (zfactor == 0.0) {
-      nzlo = static_cast<int> (zsplit[myloc[2]] * nz);
-      nzhi = static_cast<int> (zsplit[myloc[2]+1] * nz) - 1;
-    } else {
-      nzlo = static_cast<int> (zsplit[myloc[2]] * nz/zfactor);
-      nzhi = static_cast<int> (zsplit[myloc[2]+1] * nz/zfactor) - 1;
-    }
-
-  } else {
-    nxlo = static_cast<int> (mysplit[0][0] * nx);
-    nxhi = static_cast<int> (mysplit[0][1] * nx) - 1;
-
-    nylo = static_cast<int> (mysplit[1][0] * ny);
-    nyhi = static_cast<int> (mysplit[1][1] * ny) - 1;
-
-    if (zfactor == 0.0) {
-      nzlo = static_cast<int> (mysplit[2][0] * nz);
-      nzhi = static_cast<int> (mysplit[2][1] * nz) - 1;
-    } else {
-      nzlo = static_cast<int> (mysplit[2][0] * nz/zfactor);
-      nzhi = static_cast<int> (mysplit[2][1] * nz/zfactor) - 1;
-    }
-  }
-  */
 }
 
 /* ----------------------------------------------------------------------

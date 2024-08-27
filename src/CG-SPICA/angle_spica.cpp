@@ -39,13 +39,13 @@ using namespace LAMMPS_NS;
 using namespace MathConst;
 using namespace LJSPICAParms;
 
-#define SMALL 0.001
+static constexpr double SMALL = 0.001;
 
 /* ---------------------------------------------------------------------- */
 
 AngleSPICA::AngleSPICA(LAMMPS *lmp) :
-    Angle(lmp), k(nullptr), theta0(nullptr), lj_type(nullptr), lj1(nullptr), lj2(nullptr),
-    lj3(nullptr), lj4(nullptr), rminsq(nullptr), emin(nullptr)
+    Angle(lmp), k(nullptr), theta0(nullptr), repscale(nullptr), lj_type(nullptr), lj1(nullptr),
+    lj2(nullptr), lj3(nullptr), lj4(nullptr), rminsq(nullptr), emin(nullptr)
 {
   repflag = 0;
 }
@@ -54,7 +54,7 @@ AngleSPICA::AngleSPICA(LAMMPS *lmp) :
 
 AngleSPICA::~AngleSPICA()
 {
-  if (allocated) {
+  if (allocated && !copymode) {
     memory->destroy(setflag);
     memory->destroy(k);
     memory->destroy(theta0);
@@ -297,7 +297,7 @@ void AngleSPICA::init_style()
 
   repflag = 0;
   for (int i = 1; i <= atom->nangletypes; i++)
-    if (repscale[i] > 0.0) repflag = 1;
+    if (repscale && (repscale[i] > 0.0)) repflag = 1;
 
   // set up pointers to access SPICA LJ parameters for 1-3 interactions
 

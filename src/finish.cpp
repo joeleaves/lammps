@@ -24,8 +24,6 @@
 #include "memory.h"             // IWYU pragma: keep
 #include "min.h"
 #include "molecule.h"
-#include "neigh_list.h"
-#include "neigh_request.h"
 #include "neighbor.h"           // IWYU pragma: keep
 #include "output.h"
 #include "pair.h"
@@ -64,7 +62,8 @@ Finish::Finish(LAMMPS *lmp) : Pointers(lmp) {}
 
 void Finish::end(int flag)
 {
-  int i,nneigh,nneighfull;
+  int i;
+  bigint nneigh,nneighfull;
   int histo[10];
   int minflag,prdflag,tadflag,hyperflag;
   int timeflag,fftflag,histoflag,neighflag;

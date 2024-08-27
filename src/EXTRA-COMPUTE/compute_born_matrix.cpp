@@ -33,10 +33,8 @@
 #include "modify.h"
 #include "molecule.h"
 #include "neigh_list.h"
-#include "neigh_request.h"
 #include "neighbor.h"
 #include "pair.h"
-#include "universe.h"
 #include "update.h"
 
 #include <cmath>
@@ -44,8 +42,7 @@
 
 using namespace LAMMPS_NS;
 
-#define BIG 1000000000
-#define SMALL 1e-16
+static constexpr double SMALL = 1e-16;
 
 // this table is used to pick the 3d rij vector indices used to
 // compute the 6 indices long Voigt stress vector
@@ -116,7 +113,8 @@ static int constexpr albemunu[21][4] = {
 /* ---------------------------------------------------------------------- */
 
 ComputeBornMatrix::ComputeBornMatrix(LAMMPS *lmp, int narg, char **arg) :
-    Compute(lmp, narg, arg), id_virial(nullptr), temp_x(nullptr), temp_f(nullptr)
+    Compute(lmp, narg, arg), values_local(nullptr), values_global(nullptr), list(nullptr),
+    id_virial(nullptr), compute_virial(nullptr), temp_x(nullptr), temp_f(nullptr)
 {
   if (narg < 3) error->all(FLERR, "Illegal compute born/matrix command");
 

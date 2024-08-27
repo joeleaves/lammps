@@ -135,6 +135,27 @@
    obj:*
 }
 {
+   OpenMP_init_part12
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:gomp_malloc_cleared
+   ...
+   fun:call_init
+   ...
+   obj:*
+}
+{
+   OpenMP_init_clang1
+   Memcheck:Leak
+   match-leak-kinds: possible
+   fun:malloc
+   ...
+   fun:omp_set_num_threads
+   ...
+   obj:*
+}
+{
    OpenMP_open_part1
    Memcheck:Leak
    match-leak-kinds: reachable
@@ -169,6 +190,16 @@
    fun:memalign
    fun:gomp_aligned_alloc
    fun:gomp_new_team
+   fun:GOMP_parallel
+}
+
+{
+   gomp_realloc1
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:gomp_realloc
+   fun:gomp_team_start
    fun:GOMP_parallel
 }
 
