@@ -950,6 +950,17 @@ message(STATUS "<<< Build configuration >>>
 if(CMAKE_CROSSCOMPILING)
   message(STATUS "Cross compiling on ${CMAKE_HOST_SYSTEM}")
 endif()
+
+# CMakeLists.txt
+
+# Detect platform
+if(APPLE)
+    add_definitions(-DAPPLE)
+elseif(UNIX)
+    add_definitions(-DUNIX)
+endif()
+
+# Rest of the CMake configuration...
 ###############################################################################
 # Print package summary
 ###############################################################################
